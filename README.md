@@ -50,8 +50,14 @@ Lokal testen: `python3 -m http.server 8000` im Projektordner, dann `http://local
 
 ## Songs und Themen ändern
 
+Themen: Internationale Hits, Filmmusik, Disney, Türkische Musik, Deutschrap, Rock, Partyhits,
+Hip-Hop & R&B, Serien & Zeichentrick. Dazu kommt „Gemischt“ (alle Themen zusammen).
+Bei Serien ist das Jahr das Jahr, in dem die Serie mit diesem Titelsong gestartet ist.
+
 Die Songs stehen in `tools/songs-src.txt`, eine Zeile pro Song: `Jahr | Interpret | Titel`.
-Ein neues Thema beginnt mit einer Zeile wie `[rock] Rock`. Danach:
+Ein neues Thema beginnt mit einer Zeile wie `[schlager] Schlager`. Die App zeigt es dann von selbst an.
+Heißt die Aufnahme bei Deezer anders als der Titel, den die App zeigen soll (zum Beispiel „Main Title“
+für Game of Thrones), kommen zwei Spalten dazu: `| Suchbegriff | Titel bei Deezer`. Danach:
 
 ```
 cd tools

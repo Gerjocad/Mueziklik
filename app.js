@@ -8,7 +8,7 @@
     return {
       id: t.id, name: t.name,
       songs: t.songs.map(function (s) {
-        return { theme: t.id, year: s[0], id: s[1], title: s[2], artist: s[3], q: s[4] || '', key: t.id + '|' + s[0] + '|' + s[2] };
+        return { theme: t.id, year: s[0], id: s[1], title: s[2], artist: s[3], q: s[4] || '', m: s[5] || '', key: t.id + '|' + s[0] + '|' + s[2] };
       })
     };
   });

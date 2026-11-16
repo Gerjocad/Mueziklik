@@ -33,8 +33,8 @@ for (const raw of src.split('\n')) {
   if (!line || line.startsWith('#')) continue;
   const m = line.match(/^\[(\w+)\]\s*(.+)$/);
   if (m) { cur = { id: m[1], name: m[2], songs: [] }; themes.push(cur); continue; }
-  const [year, artist, title, q] = line.split('|').map(s => s.trim());
-  const song = { year: +year, artist, title, q };
+  const [year, artist, title, q, mt] = line.split('|').map(s => s.trim());
+  const song = { year: +year, artist, title, q, m: mt };
   let best = null;
   for (const qq of M.queries(song)) {
     for (const c of await search(qq)) { const s = M.score(c, song, !!q); if (s > (best?.s ?? 0)) best = { ...c, s }; }
@@ -42,14 +42,15 @@ for (const raw of src.split('\n')) {
   }
   const safe = best && best.s >= M.SAFE;
   const entry = [song.year, safe ? best.id : 0, title, artist];
-  if (q) entry.push(q);
+  if (q || mt) entry.push(q || '');
+  if (mt) entry.push(mt);
   cur.songs.push(entry);
   report.push((safe ? 'OK   ' : 'APP  ') + `${cur.id} ${year} | ${artist} – ${title}` + (best ? `  =>  ${best.artist} – ${best.title} [${best.album}] (${best.s.toFixed(0)})` : ''));
 }
 fs.writeFileSync(cachePath, JSON.stringify(cache));
 fs.writeFileSync(path.join(dir, 'resolve-report.txt'), report.join('\n') + '\n');
 const out = '// Automatisch erzeugt von tools/resolve-songs.mjs aus tools/songs-src.txt. Nicht von Hand ändern.\n' +
-  '// Eintrag: [Jahr, Deezer-Track-ID (0 = App sucht selbst), Titel, Interpret, optionaler Suchbegriff]\n' +
+  '// Eintrag: [Jahr, Deezer-Track-ID (0 = App sucht selbst), Titel, Interpret, optionaler Suchbegriff, optionaler Deezer-Titel]\n' +
   'window.MZK_THEMES = ' + JSON.stringify(themes).replace(/\{"id"/g, '\n{"id"').replace(/\],\[/g, '],\n[') + ';\n';
 fs.writeFileSync(path.join(dir, '..', 'songs.js'), out);
 console.log(themes.map(t => `${t.id}: ${t.songs.length} Titel, ${t.songs.filter(s => s[1]).length} mit fester ID`).join('\n'));

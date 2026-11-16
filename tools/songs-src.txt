@@ -1,4 +1,6 @@
-# Müziklik-Songlisten. Format: Jahr | Interpret | Titel   (optional: | Suchbegriff für Deezer)
+# Müziklik-Songlisten. Format: Jahr | Interpret | Titel
+# Optional dahinter: | Suchbegriff für Deezer | Titel, wie er bei Deezer heißt (wenn er vom angezeigten Titel abweicht)
+# Thema Serien: Das Jahr ist das Jahr, in dem die Serie mit diesem Titelsong gestartet ist.
 # Nach Änderungen: node tools/resolve-songs.mjs  (sucht die Deezer-IDs und schreibt songs.js)
 
 [hits] Internationale Hits
@@ -400,3 +402,574 @@
 2024 | Auli'i Cravalho | Beyond
 2024 | Dwayne Johnson | Can I Get A Chee Hoo?
 2025 | Shakira | Zoo
+
+[tuerkisch] Türkische Musik
+1970 | Barış Manço | Dağlar Dağlar
+1974 | Erkin Koray | Şaşkın
+1975 | Orhan Gencebay | Batsın Bu Dünya
+1975 | Cem Karaca | Tamirci Çırağı
+1980 | Ajda Pekkan | Pet'r Oil
+1981 | Barış Manço | Arkadaşım Eşek
+1981 | Barış Manço | Gülpembe
+1983 | Barış Manço | Halil İbrahim Sofrası
+1984 | Sezen Aksu | Sen Ağlama
+1985 | İbrahim Tatlıses | Mavi Mavi
+1986 | Sezen Aksu | Git
+1986 | Barış Manço | Domates Biber Patlıcan
+1991 | Sezen Aksu | Hadi Bakalım
+1991 | Yonca Evcimik | Abone
+1992 | Tarkan | Kıl Oldum
+1993 | Kenan Doğulu | Yaparım Bilirsin
+1993 | Levent Yüksel | Med Cezir
+1994 | Tarkan | Hepsi Senin Mi?
+1994 | Mustafa Sandal | Suç Bende
+1994 | Burak Kut | Benimle Oynama
+1994 | İbrahim Tatlıses | Haydi Söyle
+1995 | Mirkelam | Her Gece
+1996 | Mustafa Sandal | Araba
+1996 | Şebnem Ferah | Sil Baştan
+1997 | Tarkan | Şımarık
+1998 | Mustafa Sandal | Aya Benzer
+1999 | Sertab Erener | Vur Yüreğim
+1999 | Duman | Köprüaltı
+2000 | Teoman | Paramparça
+2001 | Tarkan | Kuzu Kuzu
+2001 | Teoman | Gönülçelen
+2002 | Duman | Her Şeyi Yak
+2002 | Sezen Aksu | Şanıma İnanma
+2003 | Sertab Erener | Everyway That I Can
+2003 | Tarkan | Dudu
+2004 | Athena | For Real
+2004 | Gülşen | Of Of
+2004 | Mor ve Ötesi | Bir Derdim Var
+2004 | Hande Yener | Acele Etme
+2005 | Mustafa Sandal | İsyankar
+2006 | Kenan Doğulu | Çakkıdı
+2006 | Murat Boz | Aşkı Bulamam Ben
+2006 | Serdar Ortaç | Dansöz
+2006 | Demet Akalın | Afedersin
+2006 | Müslüm Gürses | Nilüfer
+2007 | Kenan Doğulu | Shake It Up Şekerim
+2007 | Hande Yener | Romeo
+2007 | Sıla | ...Dan Sonra
+2008 | Mor ve Ötesi | Deli
+2008 | Murat Boz | Para Yok
+2009 | Hadise | Düm Tek Tek
+2009 | Sıla | Sevişmeden Uyumayalım
+2010 | Manga | We Could Be the Same
+2010 | Tarkan | Öp
+2011 | Model | Değmesin Ellerimiz
+2012 | Can Bonomo | Love Me Back
+2013 | Gülşen | Yatcaz Kalkcaz Ordayım
+2013 | Model | Sarı Kurdeleler
+2014 | İrem Derici | Kalbimin Tek Sahibine
+2015 | Gülşen | Bangır Bangır
+2015 | Simge | Miş Miş
+2015 | Mabel Matiz | Gel
+2016 | Murat Boz | Janti
+2016 | Emrah Karaduman | Cevapsız Çınlama
+2017 | Tarkan | Yolla
+2017 | Aleyna Tilki | Sen Olsan Bari
+2017 | Simge | Üzülmedin mi?
+2017 | Ezhel | Geceler
+2018 | Mabel Matiz | Öyle Kolaysa
+2020 | Edis | Martılar
+2021 | Sefo | Bilmem Mi?
+2022 | Tarkan | Geççek
+2022 | Mabel Matiz | Karakol
+2023 | Semicenk | Pişman Değilim
+
+[deutschrap] Deutschrap
+1992 | Die Fantastischen Vier | Die da!?!
+1992 | Advanced Chemistry | Fremd im eigenen Land
+1995 | Die Fantastischen Vier | Sie ist weg
+1995 | Fettes Brot | Nordisch by Nature
+1996 | Fettes Brot | Jein
+1996 | Tic Tac Toe | Verpiss' dich
+1997 | Tic Tac Toe | Warum?
+1997 | Freundeskreis | A-N-N-A
+1997 | Sabrina Setlur | Du liebst mich nicht
+1998 | Absolute Beginner | Liebes Lied
+1998 | Fünf Sterne Deluxe | Dein Herz schlägt schneller
+1998 | Die Firma | Die Eine
+1999 | Die Fantastischen Vier | MfG
+1999 | Freundeskreis | Mit dir
+2000 | Deichkind | Bon Voyage
+2000 | Dynamite Deluxe | Wie jetzt
+2001 | Samy Deluxe | Weck mich auf
+2001 | Fettes Brot | Schwule Mädchen
+2001 | Seeed | Dickes B
+2002 | Massive Töne | Cruisen
+2004 | Sido | Mein Block
+2004 | Die Fantastischen Vier | Troy
+2005 | Fettes Brot | Emanuela
+2005 | Kool Savas & Azad | All 4 One
+2005 | Seeed | Ding
+2006 | Bushido | Von der Skyline zum Bordstein zurück
+2006 | Deichkind | Remmidemmi (Yippie Yippie Yeah)
+2007 | Bushido | Alles verloren
+2007 | Azad | Prison Break Anthem (Ich glaub an dich)
+2007 | Culcha Candela | Hamma!
+2008 | Peter Fox | Alles neu
+2008 | Peter Fox | Haus am See
+2008 | Peter Fox | Schwarz zu blau
+2008 | Sido | Augen auf
+2008 | Bushido | Für immer jung
+2010 | Marteria | Verstrahlt
+2011 | Casper | So perfekt
+2012 | Cro | Easy
+2012 | Cro | Du
+2012 | Deichkind | Leider geil (Leider geil)
+2012 | Marteria | Lila Wolken
+2012 | Sido | Bilder im Kopf
+2012 | Haftbefehl | Chabos wissen wer der Babo ist
+2013 | Casper | Im Ascheregen
+2013 | Alligatoah | Willst du
+2013 | Cro | Whatever
+2014 | Cro | Traum
+2014 | Marteria | Kids (2 Finger an den Kopf)
+2015 | K.I.Z | Hurra die Welt geht unter
+2015 | Sido | Astronaut
+2016 | Bonez MC & RAF Camora | Ohne mein Team
+2016 | Bonez MC & RAF Camora | Palmen aus Plastik
+2016 | SXTN | Deine Mutter
+2017 | SXTN | Von Party zu Party
+2017 | Bausa | Was du Liebe nennst
+2018 | Capital Bra | Neymar
+2018 | Capital Bra | One Night Stand
+2018 | Mero | Baller los
+2018 | Summer Cem | Tamam Tamam
+2018 | Loredana | Sonnenbrille
+2019 | Capital Bra | Cherry Lady
+2019 | Samra & Capital Bra | Tilidin
+2019 | Juju | Vermissen
+2019 | Mero | Wolke 10
+2019 | Apache 207 | Roller
+2019 | Shirin David | Gib ihm
+2019 | Sido | Tausend Tattoos
+2020 | Pashanim | Airwaves
+2021 | Kasimir1441 | Ohne Dich
+2021 | T-Low | We Made It
+2022 | Nina Chuba | Wildberry Lillet
+2022 | Luciano | Beautiful Girl
+2022 | Peter Fox | Zukunft Pink
+2023 | Ski Aggu | Friesenjung
+2023 | Udo Lindenberg & Apache 207 | Komet
+2024 | Shirin David | Bauch Beine Po
+2024 | Ayliva | Wunder
+2025 | Zartmann | Tau mich auf
+
+[rock] Rock
+1964 | The Kinks | You Really Got Me
+1965 | The Who | My Generation
+1967 | The Jimi Hendrix Experience | Purple Haze
+1968 | The Rolling Stones | Sympathy for the Devil
+1969 | Led Zeppelin | Whole Lotta Love
+1969 | The Rolling Stones | Gimme Shelter
+1970 | Black Sabbath | Paranoid
+1971 | The Who | Baba O'Riley
+1972 | Alice Cooper | School's Out
+1973 | Aerosmith | Dream On
+1973 | Lynyrd Skynyrd | Free Bird
+1975 | Led Zeppelin | Kashmir
+1975 | Aerosmith | Walk This Way
+1976 | Boston | More Than a Feeling
+1976 | Blue Öyster Cult | (Don't Fear) The Reaper
+1977 | Sex Pistols | God Save the Queen
+1977 | Queen | We Are the Champions
+1978 | Dire Straits | Sultans of Swing
+1978 | Van Halen | Runnin' with the Devil
+1979 | Pink Floyd | Another Brick in the Wall, Pt. 2
+1979 | The Clash | London Calling
+1980 | AC/DC | You Shook Me All Night Long
+1980 | Motörhead | Ace of Spades
+1981 | Rush | Tom Sawyer
+1982 | Iron Maiden | Run to the Hills
+1983 | ZZ Top | Gimme All Your Lovin'
+1983 | Def Leppard | Photograph
+1984 | Van Halen | Jump
+1984 | Scorpions | Rock You Like a Hurricane
+1985 | Dire Straits | Money for Nothing
+1986 | Bon Jovi | You Give Love a Bad Name
+1986 | Metallica | Master of Puppets
+1987 | Guns N' Roses | Welcome to the Jungle
+1987 | U2 | With or Without You
+1987 | Def Leppard | Pour Some Sugar on Me
+1988 | Metallica | One
+1988 | Bon Jovi | Bad Medicine
+1989 | Aerosmith | Love in an Elevator
+1989 | Mötley Crüe | Kickstart My Heart
+1990 | AC/DC | Thunderstruck
+1990 | Scorpions | Wind of Change
+1991 | Red Hot Chili Peppers | Give It Away
+1991 | Guns N' Roses | Don't Cry
+1991 | Pearl Jam | Alive
+1992 | Rage Against the Machine | Killing in the Name
+1992 | Radiohead | Creep
+1993 | Aerosmith | Cryin'
+1993 | Nirvana | Heart-Shaped Box
+1994 | Green Day | Basket Case
+1994 | Soundgarden | Black Hole Sun
+1994 | The Offspring | Self Esteem
+1995 | Alanis Morissette | You Oughta Know
+1995 | The Smashing Pumpkins | Bullet with Butterfly Wings
+1996 | Metallica | Until It Sleeps
+1997 | Rammstein | Du hast
+1997 | Foo Fighters | Everlong
+1997 | Blur | Song 2
+1998 | The Offspring | Pretty Fly (For a White Guy)
+1999 | Red Hot Chili Peppers | Californication
+1999 | blink-182 | What's My Age Again?
+1999 | Limp Bizkit | Nookie
+2000 | Papa Roach | Last Resort
+2000 | Limp Bizkit | Rollin' (Air Raid Vehicle)
+2000 | Coldplay | Yellow
+2001 | System of a Down | Chop Suey!
+2001 | Nickelback | How You Remind Me
+2001 | The Strokes | Last Nite
+2002 | Red Hot Chili Peppers | Can't Stop
+2002 | Foo Fighters | All My Life
+2002 | Audioslave | Cochise
+2003 | Evanescence | Bring Me to Life
+2003 | The Darkness | I Believe in a Thing Called Love
+2003 | Linkin Park | Numb
+2004 | Green Day | American Idiot
+2004 | Franz Ferdinand | Take Me Out
+2004 | The Killers | Somebody Told Me
+2005 | Foo Fighters | Best of You
+2005 | System of a Down | B.Y.O.B.
+2005 | Arctic Monkeys | I Bet You Look Good on the Dancefloor
+2006 | Muse | Supermassive Black Hole
+2006 | Red Hot Chili Peppers | Dani California
+2006 | My Chemical Romance | Welcome to the Black Parade
+2007 | Foo Fighters | The Pretender
+2007 | Paramore | Misery Business
+2008 | Kings of Leon | Sex on Fire
+2008 | Metallica | The Day That Never Comes
+2008 | AC/DC | Rock N Roll Train
+2009 | Green Day | 21 Guns
+2009 | Muse | Uprising
+2009 | Rammstein | Pussy
+2010 | The Black Keys | Tighten Up
+2010 | Linkin Park | The Catalyst
+2011 | The Black Keys | Lonely Boy
+2011 | Foo Fighters | Walk
+2012 | Imagine Dragons | Radioactive
+2012 | Muse | Madness
+2013 | Arctic Monkeys | Do I Wanna Know?
+2013 | Bastille | Pompeii
+2014 | Royal Blood | Figure It Out
+2014 | Foo Fighters | Something from Nothing
+2015 | Twenty One Pilots | Stressed Out
+2015 | Muse | Psycho
+2016 | Metallica | Hardwired
+2016 | Green Day | Bang Bang
+2017 | Royal Blood | Lights Out
+2017 | Foo Fighters | The Sky Is a Neighborhood
+2018 | Greta Van Fleet | When the Curtain Falls
+2019 | Rammstein | Deutschland
+2019 | Tool | Fear Inoculum
+2020 | AC/DC | Shot in the Dark
+2021 | Måneskin | I WANNA BE YOUR SLAVE
+2021 | Foo Fighters | Waiting on a War
+2022 | Rammstein | Zeit
+2022 | Red Hot Chili Peppers | Black Summer
+2022 | Muse | Won't Stand Down
+2023 | Metallica | 72 Seasons
+2023 | Foo Fighters | Rescued
+2023 | The Rolling Stones | Angry
+2024 | Linkin Park | The Emptiness Machine
+2024 | Pearl Jam | Dark Matter
+2025 | Ghost | Satanized
+2025 | Linkin Park | Up From the Bottom
+
+[party] Partyhits
+1975 | KC and the Sunshine Band | That's the Way (I Like It)
+1977 | Baccara | Yes Sir, I Can Boogie
+1978 | Boney M. | Rasputin
+1979 | Earth, Wind & Fire | Boogie Wonderland
+1979 | Sister Sledge | We Are Family
+1980 | Lipps Inc. | Funkytown
+1980 | Kool & The Gang | Celebration
+1981 | Spider Murphy Gang | Skandal im Sperrbezirk
+1982 | Trio | Da Da Da | | Da Da Da ich lieb dich nicht du liebst mich nicht aha aha aha
+1983 | Lionel Richie | All Night Long (All Night)
+1984 | Opus | Live Is Life
+1984 | Laura Branigan | Self Control
+1984 | Modern Talking | You're My Heart, You're My Soul
+1985 | Katrina & The Waves | Walking on Sunshine
+1985 | Falco | Rock Me Amadeus
+1986 | Samantha Fox | Touch Me (I Want Your Body)
+1987 | Los Lobos | La Bamba
+1988 | The Proclaimers | I'm Gonna Be (500 Miles)
+1989 | The B-52's | Love Shack
+1990 | Matthias Reim | Verdammt, ich lieb' dich
+1990 | Snap! | The Power
+1991 | Right Said Fred | I'm Too Sexy
+1992 | House of Pain | Jump Around
+1993 | Reel 2 Real | I Like to Move It
+1993 | 2 Unlimited | No Limit
+1994 | Scooter | Hyper Hyper
+1994 | Mo-Do | Eins, Zwei, Polizei
+1995 | The Outhere Brothers | Boom Boom Boom
+1995 | Scooter | Move Your Ass!
+1996 | Mr. President | Coco Jamboo
+1996 | Blümchen | Boomerang
+1997 | Chumbawamba | Tubthumping
+1998 | Vengaboys | Boom, Boom, Boom, Boom!!
+1998 | Loona | Bailando
+1998 | Guildo Horn | Guildo hat euch lieb!
+1999 | Vengaboys | We're Going to Ibiza!
+1999 | DJ Ötzi | Anton aus Tirol
+1999 | Bloodhound Gang | The Bad Touch
+1999 | Mickie Krause | Zehn nackte Friseusen
+2000 | DJ Ötzi | Hey Baby (Uhh, Ahh)
+2000 | ATC | Around the World (La La La La La)
+2001 | Geri Halliwell | It's Raining Men
+2002 | DJ BoBo | Chihuahua
+2002 | Scooter | Nessaja
+2003 | Sean Paul | Get Busy
+2003 | Scooter | Maria (I Like It Loud)
+2003 | Höhner | Viva Colonia
+2004 | Eric Prydz | Call on Me
+2005 | Crazy Frog | Axel F
+2005 | Bob Sinclar | Love Generation
+2006 | Bob Sinclar | World, Hold On
+2006 | Sportfreunde Stiller | '54, '74, '90, 2006
+2007 | DJ Ötzi & Nik P. | Ein Stern (… der deinen Namen trägt)
+2008 | Guru Josh Project | Infinity 2008
+2008 | Kid Rock | All Summer Long
+2009 | Pitbull | I Know You Want Me (Calle Ocho)
+2010 | Die Atzen | Disco Pogo
+2010 | Yolanda Be Cool | We No Speak Americano
+2010 | Taio Cruz | Dynamite
+2011 | LMFAO | Sexy and I Know It
+2011 | Pitbull | Give Me Everything
+2011 | Michel Teló | Ai Se Eu Te Pego
+2012 | Die Toten Hosen | Tage wie diese
+2012 | Flo Rida | Whistle
+2013 | Helene Fischer | Atemlos durch die Nacht
+2013 | Martin Garrix | Animals
+2014 | Andreas Bourani | Auf uns
+2014 | Lilly Wood & The Prick | Prayer in C
+2015 | Gestört aber GeiL | Unter meiner Haut
+2015 | Namika | Lieblingsmensch
+2016 | Kungs | This Girl
+2016 | Calvin Harris | This Is What You Came For
+2017 | Robin Schulz | OK
+2018 | Almklausi | Mama Laudaaa
+2018 | Josh. | Cordula Grün
+2018 | El Chombo | Dame Tu Cosita
+2018 | Dynoro | In My Mind
+2019 | Meduza | Piece of Your Heart
+2020 | Joel Corry | Head & Heart
+2020 | Jawsh 685 | Savage Love (Laxed - Siren Beat)
+2021 | Riton | Friday
+2021 | Majestic | Rasputin
+2021 | Farruko | Pepas
+2022 | DJ Robin & Schürze | Layla
+2022 | Julian Sommer | Dicht im Flieger
+2023 | Peggy Gou | (It Goes Like) Nanana
+2024 | Artemas | i like the way you kiss me
+
+[hiphop] Hip-Hop & R&B
+1979 | The Sugarhill Gang | Rapper's Delight
+1982 | Grandmaster Flash & The Furious Five | The Message
+1984 | Chaka Khan | I Feel for You
+1986 | Run-D.M.C. | Walk This Way
+1986 | Beastie Boys | (You Gotta) Fight for Your Right (To Party!)
+1987 | Salt-N-Pepa | Push It
+1987 | Eric B. & Rakim | Paid in Full
+1988 | N.W.A | Straight Outta Compton
+1988 | Bobby Brown | My Prerogative
+1989 | De La Soul | Me Myself and I
+1989 | Public Enemy | Fight the Power
+1989 | Young MC | Bust a Move
+1990 | A Tribe Called Quest | Can I Kick It?
+1990 | Bell Biv DeVoe | Poison
+1991 | Naughty by Nature | O.P.P.
+1991 | Boyz II Men | Motownphilly
+1991 | Salt-N-Pepa | Let's Talk About Sex
+1992 | Sir Mix-a-Lot | Baby Got Back
+1992 | Arrested Development | People Everyday
+1992 | En Vogue | My Lovin' (You're Never Gonna Get It)
+1993 | Snoop Dogg | What's My Name?
+1993 | Wu-Tang Clan | C.R.E.A.M.
+1993 | Cypress Hill | Insane in the Brain
+1993 | Salt-N-Pepa | Shoop
+1994 | The Notorious B.I.G. | Juicy
+1994 | Warren G | Regulate
+1994 | TLC | Creep
+1994 | Aaliyah | Back & Forth
+1995 | 2Pac | California Love
+1995 | Montell Jordan | This Is How We Do It
+1995 | Skee-Lo | I Wish
+1996 | Fugees | Ready or Not
+1996 | Blackstreet | No Diggity
+1996 | Busta Rhymes | Woo-Hah!! Got You All in Check
+1996 | Toni Braxton | Un-Break My Heart
+1997 | The Notorious B.I.G. | Hypnotize
+1997 | The Notorious B.I.G. | Mo Money Mo Problems
+1997 | Puff Daddy | I'll Be Missing You
+1997 | Missy Elliott | The Rain (Supa Dupa Fly)
+1997 | Usher | You Make Me Wanna...
+1998 | Lauryn Hill | Doo Wop (That Thing)
+1998 | 2Pac | Changes
+1998 | Brandy & Monica | The Boy Is Mine
+1998 | Jay-Z | Hard Knock Life (Ghetto Anthem)
+1998 | DMX | Ruff Ryders' Anthem
+1999 | Eminem | My Name Is
+1999 | TLC | No Scrubs
+1999 | Dr. Dre | Still D.R.E.
+1999 | Destiny's Child | Say My Name
+2000 | OutKast | Ms. Jackson
+2000 | Eminem | Stan
+2000 | Nelly | Country Grammar (Hot Shit)
+2000 | Aaliyah | Try Again
+2001 | Missy Elliott | Get Ur Freak On
+2001 | Alicia Keys | Fallin'
+2001 | Jay-Z | Izzo (H.O.V.A.)
+2001 | Usher | U Remind Me
+2001 | Mary J. Blige | Family Affair
+2002 | Eminem | Without Me
+2002 | Missy Elliott | Work It
+2002 | Nelly | Hot in Herre
+2002 | Justin Timberlake | Cry Me a River
+2003 | 50 Cent | P.I.M.P.
+2003 | The Black Eyed Peas | Where Is the Love?
+2003 | Kelis | Milkshake
+2003 | Jay-Z | 99 Problems
+2004 | Kanye West | Jesus Walks
+2004 | Snoop Dogg | Drop It Like It's Hot
+2004 | Mario | Let Me Love You
+2004 | Ciara | Goodies
+2004 | Terror Squad | Lean Back
+2005 | Kanye West | Gold Digger
+2005 | 50 Cent | Candy Shop
+2005 | Mariah Carey | We Belong Together
+2005 | The Pussycat Dolls | Don't Cha
+2006 | Beyoncé | Irreplaceable
+2006 | T.I. | What You Know
+2006 | Akon | Smack That
+2006 | Rihanna | SOS
+2007 | Kanye West | Stronger
+2007 | Soulja Boy | Crank That (Soulja Boy)
+2007 | Alicia Keys | No One
+2007 | Timbaland | The Way I Are
+2008 | Lil Wayne | Lollipop
+2008 | T.I. | Live Your Life
+2008 | Kanye West | Heartless
+2008 | Estelle | American Boy
+2008 | Ne-Yo | Closer
+2009 | Jay-Z | Empire State of Mind
+2009 | The Black Eyed Peas | Boom Boom Pow
+2009 | Drake | Best I Ever Had
+2010 | Eminem | Not Afraid
+2010 | B.o.B | Airplanes
+2010 | Usher | OMG
+2011 | Nicki Minaj | Super Bass
+2011 | Jay-Z & Kanye West | Ni**as in Paris
+2011 | Drake | Headlines
+2012 | Kendrick Lamar | Swimming Pools (Drank)
+2012 | Frank Ocean | Thinkin Bout You
+2012 | Kanye West | Mercy
+2013 | Drake | Hold On, We're Going Home
+2013 | Jay-Z | Holy Grail
+2013 | Eminem | The Monster
+2014 | Iggy Azalea | Fancy
+2014 | Nicki Minaj | Anaconda
+2014 | Kendrick Lamar | i
+2015 | Drake | Hotline Bling
+2015 | Kendrick Lamar | Alright
+2015 | The Weeknd | The Hills
+2016 | Rae Sremmurd | Black Beatles
+2016 | Kanye West | Famous
+2016 | Beyoncé | Formation
+2016 | Rihanna | Work
+2017 | Kendrick Lamar | HUMBLE.
+2017 | Cardi B | Bodak Yellow
+2017 | Post Malone | rockstar
+2017 | Future | Mask Off
+2017 | SZA | Love Galore
+2018 | Travis Scott | SICKO MODE
+2018 | Childish Gambino | This Is America
+2018 | Drake | In My Feelings
+2018 | Cardi B | I Like It
+2019 | Lizzo | Juice
+2019 | Megan Thee Stallion | Hot Girl Summer
+2019 | DaBaby | Suge
+2019 | Roddy Ricch | The Box
+2020 | Megan Thee Stallion | Savage
+2020 | DaBaby | ROCKSTAR
+2020 | Pop Smoke | What You Know Bout Love
+2020 | The Weeknd | Save Your Tears
+2021 | Lil Nas X | INDUSTRY BABY
+2021 | Doja Cat | Kiss Me More
+2021 | Silk Sonic | Leave the Door Open
+2021 | Drake | Way 2 Sexy
+2021 | Polo G | RAPSTAR
+2022 | Jack Harlow | First Class
+2022 | Kendrick Lamar | N95
+2022 | SZA | Kill Bill
+2022 | Future | WAIT FOR U
+2022 | Drake | Rich Flex
+2023 | Travis Scott | FE!N
+2023 | Lil Durk | All My Life
+2023 | Victoria Monét | On My Mama
+2024 | Kendrick Lamar | Not Like Us
+2024 | Future & Metro Boomin | Like That
+2024 | GloRilla | TGIF
+2024 | Tommy Richman | MILLION DOLLAR BABY
+2024 | Kendrick Lamar | luther
+2025 | Doechii | Anxiety
+2025 | Drake | NOKIA
+2025 | Playboi Carti | EVIL J0RDAN
+
+[serien] Serien & Zeichentrick
+1966 | Alexander Courage | Raumschiff Enterprise (Star Trek) | | Star Trek Theme
+1966 | Lalo Schifrin | Kobra, übernehmen Sie (Mission: Impossible) | | Mission: Impossible
+1966 | Neal Hefti | Batman (Serie) | | Batman Theme
+1968 | The Ventures | Hawaii Fünf-Null | | Hawaii Five-O
+1970 | Klaus Doldinger | Tatort | | Tatort
+1973 | Ingfried Hoffmann | Sesamstraße (Wer, wie, was) | | Wer, wie, was
+1980 | Christian Bruhn | Captain Future | | Captain Future
+1982 | Stu Phillips | Knight Rider | knight rider theme stu phillips | Main Title
+1982 | Gary Portnoy | Cheers (Where Everybody Knows Your Name) | | Where Everybody Knows Your Name
+1983 | Mike Post | Das A-Team | a-team theme mike post | The A-Team
+1984 | Jan Hammer | Miami Vice | | Miami Vice Theme
+1985 | The Disney Afternoon Studio Chorus | Gummibärenbande | | Gummi Bears Theme
+1987 | The Disney Afternoon Studio Chorus | DuckTales | | Duck Tales Theme
+1987 | Teenage Mutant Ninja Turtles | Teenage Mutant Ninja Turtles | | Teenage Mutant Ninja Turtles Theme
+1989 | Danny Elfman | Die Simpsons | simpsons theme danny elfman | Main Title Theme
+1990 | DJ Jazzy Jeff & The Fresh Prince | Der Prinz von Bel-Air | | The Fresh Prince of Bel-Air
+1990 | Angelo Badalamenti | Twin Peaks | | Twin Peaks Theme (Instrumental)
+1991 | The Disney Afternoon Studio Chorus | Darkwing Duck | | Darkwing Duck Theme
+1991 | Jimi Jamison | Baywatch (I'm Always Here) | | I'm Always Here
+1993 | Mark Snow | Akte X | | The X-Files Theme
+1993 | Power Rangers | Power Rangers | | Go Go Power Rangers
+1994 | The Rembrandts | Friends (I'll Be There for You) | | I'll Be There for You
+1997 | Primus | South Park | | South Park Theme
+1998 | Jason Paige | Pokémon | | Pokémon Theme
+1999 | SpongeBob SquarePants | SpongeBob Schwammkopf | | SpongeBob SquarePants Theme Song
+2000 | They Might Be Giants | Malcolm mittendrin (Boss of Me) | | Boss of Me
+2002 | Christina Milian | Kim Possible (Call Me, Beep Me!) | | Call Me, Beep Me!
+2004 | Danny Elfman | Desperate Housewives | | Desperate Housewives Theme
+2005 | The Solids | How I Met Your Mother (Hey Beautiful) | | Hey Beautiful
+2006 | Rolfe Kent | Dexter | | Dexter Main Title
+2007 | Barenaked Ladies | The Big Bang Theory | | Big Bang Theory Theme
+2007 | Bowling For Soup | Phineas und Ferb | | Today Is Gonna Be a Great Day
+2007 | Miranda Cosgrove | iCarly (Leave It All to Me) | | Leave It All to Me
+2008 | Dave Porter | Breaking Bad | | Breaking Bad Main Title Theme
+2010 | Bear McCreary | The Walking Dead | | Theme from the Walking Dead
+2010 | David Arnold | Sherlock | sherlock opening titles david arnold | Opening Titles
+2011 | Ramin Djawadi | Game of Thrones | game of thrones main title ramin djawadi | Main Title
+2013 | PAW Patrol | PAW Patrol | | PAW Patrol Opening Theme
+2016 | Kyle Dixon & Michael Stein | Stranger Things | | Stranger Things
+2016 | Ramin Djawadi | Westworld | | Main Title Theme - Westworld
+2017 | Cecilia Krull | Haus des Geldes (My Life Is Going On) | | My Life Is Going On
+2018 | Nicholas Britell | Succession | | Succession
+2019 | Sonya Belousova | The Witcher (Toss a Coin to Your Witcher) | | Toss a Coin to Your Witcher
+2019 | Ludwig Göransson | The Mandalorian | | The Mandalorian
+2021 | Jung Jaeil | Squid Game | | Way Back Then
+2021 | Imagine Dragons | Arcane (Enemy) | | Enemy
+2022 | Danny Elfman | Wednesday | | Wednesday Main Titles

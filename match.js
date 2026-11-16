@@ -29,9 +29,11 @@
     for (var i = 0; i < parts.length; i++) {
       if (BAD.test(parts[i]) && !OKVER.test(parts[i])) return -1;
     }
+    if (/\blive\b/i.test(String(c.album || ''))) return -1; // Live-Album: fast immer eine Live-Aufnahme
     if (BAD.test(String(c.album || '')) && !/soundtrack|motion picture|original/i.test(c.album)) s -= 30;
     var wa = words(want.artist), ca = norm(c.artist);
-    var hit = wa.filter(function (w) { return ca.indexOf(w) !== -1; }).length;
+    var caPad = ' ' + ca + ' ';
+    var hit = wa.filter(function (w) { return caPad.indexOf(' ' + w + ' ') !== -1; }).length;
     if (!loose) {
       if (wa.length && hit === 0) return -1;
       s += wa.length ? 40 * hit / wa.length : 0;

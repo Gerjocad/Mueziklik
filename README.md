@@ -51,8 +51,10 @@ Lokal testen: `python3 -m http.server 8000` im Projektordner, dann `http://local
 ## Songs und Themen ändern
 
 Themen: Internationale Hits, Filmmusik, Disney, Türkische Musik, Deutschrap, Rock, Partyhits,
-Hip-Hop & R&B, Serien & Zeichentrick. Dazu kommt „Gemischt“ (alle Themen zusammen).
+Hip-Hop & R&B, Serien & Zeichentrick, One-Hit-Wonder, Nummer 1 in Deutschland, Eurovision Song Contest.
+Dazu kommt „Gemischt“ (alle Themen zusammen).
 Bei Serien ist das Jahr das Jahr, in dem die Serie mit diesem Titelsong gestartet ist.
+Bei Eurovision ist es das Jahr des Wettbewerbs.
 
 Die Songs stehen in `tools/songs-src.txt`, eine Zeile pro Song: `Jahr | Interpret | Titel`.
 Ein neues Thema beginnt mit einer Zeile wie `[schlager] Schlager`. Die App zeigt es dann von selbst an.

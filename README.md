@@ -8,7 +8,11 @@ verschiedenen Themen hören bei derselben Karte also verschiedene Songs.
 
 ## So wird gespielt
 
-1. Jeder Spieler trägt in der App seinen Namen ein und wählt ein Thema.
+1. Spiel einrichten, in drei Schritten:
+   - Namen aller Spieler eintragen, in der Reihenfolge, in der ihr spielt.
+   - Festlegen, ob alle das gleiche Thema spielen oder jeder sein eigenes.
+   - Thema wählen: einmal für alle oder nacheinander für jeden Spieler.
+   Die Themen gelten für das ganze Spiel. Ändern geht nur über „Neues Spiel“.
 2. Wer dran ist, zieht eine Karte (QR-Code nach oben) und scannt sie mit der App.
 3. Die App spielt eine 30-Sekunden-Hörprobe, ohne Titel oder Jahr zu zeigen.
 4. Der Spieler legt die Karte an die Stelle seiner Zeitleiste, an die das Jahr passt, und dreht sie um.

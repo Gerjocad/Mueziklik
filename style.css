@@ -411,7 +411,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .btn-main:hover { filter: brightness(1.08); }
 .btn-main:active { transform: scale(0.98); }
 .btn-main:disabled { opacity: .45; cursor: not-allowed; }
-.btn-main:focus-visible, .chip:focus-visible, .step:focus-visible { outline: 2px solid var(--night-ink-dim); outline-offset: 3px; }
+.btn-main:focus-visible, .step:focus-visible { outline: 2px solid var(--night-ink-dim); outline-offset: 3px; }
 .btn-main svg { width: 26px; height: 26px; }
 .btn-yes, .btn-no {
   min-height: 64px; border: none; border-radius: var(--night-radius-card);
@@ -425,20 +425,8 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
   color: var(--night-ink-soft); text-decoration: underline; text-underline-offset: 3px; font-size: 0.9rem;
 }
 
-/* Themen-Chips */
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  min-height: 40px; padding: 6px 14px; cursor: pointer;
-  border-radius: var(--act-radius-pill); border: 1.5px solid var(--night-field);
-  background: var(--night-btn); color: var(--night-label); font-size: 0.92rem; font-weight: 500;
-}
-.chip[aria-pressed="true"] { background: var(--night-accent); border-color: var(--night-accent); color: var(--night-bg); font-weight: 600; }
-
 /* Spieler einrichten */
-.setup-player { background: var(--night-surface); border-radius: var(--night-radius-card); padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 12px; }
 .setup-player__row { display: flex; gap: 10px; align-items: center; }
-.setup-player .flf { flex: 1; display: block; }
-.setup-player .flf__input { width: 100%; }
 .icon-btn {
   flex: none; width: 48px; height: 48px; border-radius: 50%; border: none; cursor: pointer;
   background: var(--night-btn); color: var(--night-ink-dim); display: grid; place-items: center;
@@ -470,7 +458,6 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .stage { text-align: center; align-items: stretch; min-height: 300px; justify-content: center; }
 .turn { font-size: 1.5rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
 .turn span { color: var(--night-accent); }
-.stage .chips { justify-content: center; }
 .notice { background: var(--night-surface); border-radius: var(--night-radius-field); padding: 10px 14px; font-size: 0.9rem; color: var(--night-label); }
 .notice--error { border: 1.5px solid var(--night-error); }
 .wld { --wld-bg: var(--night-panel); align-self: center; padding: 0; }
@@ -509,6 +496,36 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .winner { font-size: 1.9rem; font-weight: 800; line-height: 1.15; overflow-wrap: anywhere; }
 .winner span { color: var(--night-accent); }
 
+/* Einrichtung */
+.setup-title { font-size: 1.35rem; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; margin-top: -8px; }
+.setup-title:focus { outline: none; }
+.setup-player__row .flf { flex: 1; display: block; --flf-bg: var(--night-panel); }
+.setup-player__row .flf__input { width: 100%; }
+.link--back { display: inline-flex; align-items: center; gap: 4px; align-self: center; min-height: 44px; }
+.link--back svg { width: 18px; height: 18px; }
+.choice-list { display: flex; flex-direction: column; gap: 10px; }
+.choice {
+  display: flex; flex-direction: column; gap: 2px; text-align: left; cursor: pointer;
+  padding: 16px 18px; border-radius: var(--night-radius-card);
+  background: var(--night-surface); border: 1.5px solid var(--night-field); color: var(--night-ink);
+}
+.choice__title { font-weight: 600; font-size: 1.05rem; }
+.choice__desc { color: var(--night-ink-soft); font-size: 0.9rem; }
+.choice[aria-pressed="true"] { border-color: var(--night-accent); }
+.choice:hover { border-color: var(--night-border); }
+.theme-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.theme-tile {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 6px; text-align: left; cursor: pointer;
+  min-height: 84px; padding: 12px 14px; border-radius: var(--night-radius-field);
+  background: var(--night-surface); border: 1.5px solid var(--night-field); color: var(--night-ink);
+}
+.theme-tile__name { font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; hyphens: auto; }
+.theme-tile__count { font-size: 0.8rem; color: var(--night-ink-soft); }
+.theme-tile:hover { border-color: var(--night-border); }
+.theme-tile[aria-pressed="true"] { background: var(--night-accent); border-color: var(--night-accent); color: var(--night-bg); }
+.theme-tile[aria-pressed="true"] .theme-tile__count { color: var(--night-bg); }
+.choice:focus-visible, .theme-tile:focus-visible, .link:focus-visible { outline: 2px solid var(--night-ink-dim); outline-offset: 3px; }
+
 /* Einstellungen */
 dialog {
   width: min(480px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow: auto;
@@ -521,7 +538,6 @@ dialog section { display: flex; flex-direction: column; gap: 10px; }
 .manual { display: flex; gap: 10px; align-items: center; justify-content: center; }
 .manual .flf__input { width: 9ch; text-align: center; }
 .manual .flf { --flf-bg: var(--night-panel); }
-.setup-player .flf { --flf-bg: var(--night-surface); }
 
 @media (prefers-reduced-motion: reduce) {
   .eq.is-on i { animation: none; transform: scaleY(0.6); }

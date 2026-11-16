@@ -24,25 +24,9 @@
     </button>
   </header>
 
-  <!-- ===== Spiel einrichten ===== -->
+  <!-- ===== Spiel einrichten: 1. Spieler, 2. gleiches oder eigenes Thema, 3. Thema wählen ===== -->
   <main id="setup" hidden>
-    <div class="app">
-      <section class="card">
-        <h2>Wer spielt mit?</h2>
-        <p class="hint">Jeder Spieler wählt ein Thema. Die Karte bestimmt nur das Jahr, das Thema bestimmt den Song.</p>
-        <div id="setupPlayers" class="scores"></div>
-        <button class="ilf__btn" type="button" id="addPlayer">Spieler hinzufügen</button>
-      </section>
-      <section class="card">
-        <h2>Karten bis zum Sieg</h2>
-        <div class="stepper">
-          <button class="step" type="button" id="targetMinus" aria-label="Weniger Karten">−</button>
-          <output id="targetOut">10</output>
-          <button class="step" type="button" id="targetPlus" aria-label="Mehr Karten">+</button>
-        </div>
-      </section>
-      <button class="btn-main" type="button" id="startGame">Spiel starten</button>
-    </div>
+    <div class="app" id="setupBody"></div>
   </main>
 
   <!-- ===== Spiel ===== -->
@@ -50,7 +34,7 @@
     <div class="app">
       <section class="card stage" id="stage" aria-live="polite"></section>
       <section class="card">
-        <h2>Punktestand</h2>
+        <h2 id="scoresTitle">Punktestand</h2>
         <div class="scores" id="scores"></div>
       </section>
     </div>
@@ -63,12 +47,8 @@
   <form method="dialog">
     <h2 id="settingsTitle">Einstellungen</h2>
     <section>
-      <span class="label">Themen der Spieler</span>
-      <div id="settingsThemes" class="scores"></div>
-    </section>
-    <section>
       <span class="label">Songs vorab prüfen</span>
-      <p class="hint">Sucht alle Songs einmal bei Deezer. Danach startet jede Hörprobe sofort, und du siehst, wie viele Songs bei dir verfügbar sind. Dauert etwa zwei Minuten.</p>
+      <p class="hint">Sucht alle Songs einmal bei Deezer. Danach startet jede Hörprobe sofort, und du siehst, wie viele Songs bei dir verfügbar sind. Dauert etwa sechs Minuten.</p>
       <div class="bar" id="checkBar" hidden><i></i></div>
       <p class="hint" id="checkOut" role="status"></p>
       <button class="ilf__btn" type="button" id="checkSongs">Songs prüfen</button>

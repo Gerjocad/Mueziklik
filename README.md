@@ -74,7 +74,10 @@ Das Skript sucht die Deezer-Aufnahmen und schreibt `songs.js` neu. Songs ohne si
 sucht die App beim Spielen selbst, weil Deezer je nach Land andere Aufnahmen anbietet.
 In der App unter **Einstellungen → Songs prüfen** siehst du, wie viele Songs bei dir spielbar sind.
 
-Hat ein Thema für ein Jahr keinen Song, spielt die App einen Hit aus diesem Jahr und sagt das dazu.
+Jeder Song läuft pro Spiel nur einmal, egal bei welchem Spieler und in welchem Thema. Auch übersprungene
+Songs („Anderer Song“) zählen als gespielt. Hat ein Thema für ein Jahr keinen neuen Song mehr, spielt die App
+einen noch nicht gespielten Hit aus diesem Jahr, danach einen Song aus einem anderen Thema, und sagt das dazu.
+Sind alle Songs eines Jahres verbraucht, bittet die App um eine andere Karte. „Neues Spiel“ setzt das zurück.
 
 ## Aufbau
 

@@ -8,7 +8,12 @@
     return {
       id: t.id, name: t.name,
       songs: t.songs.map(function (s) {
-        return { theme: t.id, year: s[0], id: s[1], title: s[2], artist: s[3], q: s[4] || '', m: s[5] || '', key: t.id + '|' + s[0] + '|' + s[2] };
+        return {
+          theme: t.id, year: s[0], id: s[1], title: s[2], artist: s[3], q: s[4] || '', m: s[5] || '',
+          key: t.id + '|' + s[0] + '|' + s[2],
+          // gleicher Song in mehreren Themen = gleiche uid, damit er pro Spiel nur einmal läuft
+          uid: window.MZK_MATCH.norm(s[5] || s[2]) + '|' + s[0]
+        };
       })
     };
   });
@@ -30,14 +35,14 @@
     return {
       v: 1, started: false, target: 10, turn: 0, wonAck: false, themeMode: '', sharedTheme: 'hits',
       players: [{ id: uid(), name: '', theme: 'hits', score: 0 }, { id: uid(), name: '', theme: 'hits', score: 0 }],
-      played: {}, ids: {}
+      played: {}, playedIds: {}, ids: {}
     };
   }
   function load() {
     try {
       var s = JSON.parse(localStorage.getItem(KEY));
       if (s && s.v === 1 && Array.isArray(s.players) && s.players.length) {
-        s.played = s.played || {}; s.ids = s.ids || {};
+        s.played = s.played || {}; s.playedIds = s.playedIds || {}; s.ids = s.ids || {};
         return s;
       }
     } catch (e) { /* kein Speicher: mit leerem Spiel starten */ }
@@ -106,48 +111,60 @@
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var x = a[i]; a[i] = a[j]; a[j] = x; }
     return a;
   }
-  // Reihenfolge: ungespielte Songs des Themas, dann gespielte, dann Hits des Jahres als Ersatz
-  function candidates(themeId, year, skipKey) {
-    var own = themeById(themeId).songs.filter(function (s) { return s.year === year && s.key !== skipKey; });
-    var fresh = shuffle(own.filter(function (s) { return !state.played[s.key]; }));
-    var old = shuffle(own.filter(function (s) { return state.played[s.key]; }));
-    var list = fresh.concat(old).map(function (s) { return { song: s, fallback: false }; });
-    if (themeId !== FALLBACK.id && themeId !== MIX.id) {
-      var fb = FALLBACK.songs.filter(function (s) { return s.year === year && s.key !== skipKey; });
-      var fbFresh = shuffle(fb.filter(function (s) { return !state.played[s.key]; }));
-      var fbOld = shuffle(fb.filter(function (s) { return state.played[s.key]; }));
-      list = list.concat(fbFresh.concat(fbOld).map(function (s) { return { song: s, fallback: true }; }));
+  // Jeder Song läuft pro Spiel höchstens einmal, egal bei welchem Spieler und in welchem Thema.
+  // Reihenfolge: eigenes Thema, dann Hits des Jahres, dann irgendein Thema mit diesem Jahr.
+  function candidates(themeId, year) {
+    var seen = {};
+    function fresh(songs, kind) {
+      return shuffle(songs.filter(function (s) {
+        if (s.year !== year || state.played[s.uid] || seen[s.uid]) return false;
+        seen[s.uid] = 1; return true;
+      })).map(function (s) { return { song: s, fallback: kind }; });
+    }
+    var list = fresh(themeById(themeId).songs, '');
+    if (themeId !== MIX.id) {
+      if (themeId !== FALLBACK.id) list = list.concat(fresh(FALLBACK.songs, 'hits'));
+      list = list.concat(fresh(MIX.songs, 'any'));
     }
     return list;
   }
+  function markPlayed(song, deezerId) {
+    state.played[song.uid] = 1;
+    if (deezerId) state.playedIds[deezerId] = 1;
+    save();
+  }
 
-  async function playYear(year, skipKey) {
+  async function playYear(year, another) {
     stopScan();
     audio.pause();
     var p = player();
     stage = { mode: 'load', year: year };
     render();
-    var list = candidates(p.theme, year, skipKey);
+    var list = candidates(p.theme, year);
     var netError = false;
     for (var i = 0; i < list.length; i++) {
       var hit = null;
       try { hit = await resolveSong(list[i].song); } catch (e) { netError = true; break; }
       if (stage.mode !== 'load' || stage.year !== year) return; // inzwischen abgebrochen
-      if (hit) {
-        state.played[list[i].song.key] = 1; save();
-        stage = { mode: 'play', year: year, song: list[i].song, fallback: list[i].fallback, paused: false };
-        audio.src = hit.preview;
-        audio.currentTime = 0;
-        render();
-        audio.play().catch(function () { stage.paused = true; render(); });
-        return;
-      }
+      if (!hit) continue;
+      // dieselbe Aufnahme lief schon unter anderem Namen (z. B. Serien-Titelsong und Hit)
+      if (state.playedIds[hit.id]) { markPlayed(list[i].song); continue; }
+      markPlayed(list[i].song, hit.id);
+      stage = { mode: 'play', year: year, song: list[i].song, fallback: list[i].fallback, paused: false };
+      audio.src = hit.preview;
+      audio.currentTime = 0;
+      render();
+      audio.play().catch(function () { stage.paused = true; render(); });
+      return;
     }
+    var used = MIX.songs.some(function (s) { return s.year === year && state.played[s.uid]; });
     stage = {
       mode: 'idle',
       error: netError
         ? 'Deezer ist gerade nicht erreichbar. Prüfe die Internetverbindung und scanne die Karte noch einmal.'
-        : (skipKey ? 'Für diese Karte gibt es keinen weiteren Song.' : 'Für diese Karte habe ich keinen spielbaren Song gefunden. Zieh bitte eine andere Karte.')
+        : (used || another)
+          ? 'Alle Songs aus ' + year + ' sind in diesem Spiel schon gelaufen. Zieh bitte eine andere Karte.'
+          : 'Für ' + year + ' habe ich keinen spielbaren Song gefunden. Zieh bitte eine andere Karte.'
     };
     render();
   }
@@ -241,7 +258,7 @@
   function newGame() {
     stopScan(); audio.pause();
     state.players.forEach(function (p) { p.score = 0; });
-    state.started = false; state.turn = 0; state.played = {}; state.wonAck = false;
+    state.started = false; state.turn = 0; state.played = {}; state.playedIds = {}; state.wonAck = false;
     save();
     setup = { step: 'players', idx: 0 };
     stage = { mode: 'idle' };
@@ -386,7 +403,8 @@
       h = '<span class="label">' + esc(playerName(p)) + ' · ' + esc(themeById(p.theme).name) + '</span>' +
         '<div class="eq' + (stage.paused ? '' : ' is-on') + '" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>' +
         '<div class="bar" aria-hidden="true"><i id="progress"></i></div>' +
-        (stage.fallback ? '<p class="notice">Zu diesem Jahr gibt es im Thema ' + esc(themeById(p.theme).name) + ' keinen Song. Es läuft ein Hit aus dem Jahr.</p>' : '') +
+        (stage.fallback ? '<p class="notice">Im Thema ' + esc(themeById(p.theme).name) + ' gibt es für dieses Jahr keinen neuen Song mehr. ' +
+          (stage.fallback === 'hits' ? 'Es läuft ein Hit aus dem Jahr.' : 'Es läuft ein Song aus einem anderen Thema.') + '</p>' : '') +
         '<div class="btn-row"><button type="button" class="ilf__btn" data-act="toggle" id="toggleBtn">' + (stage.paused ? 'Abspielen' : 'Pause') + '</button>' +
         '<button type="button" class="ilf__btn" data-act="other">Anderer Song</button></div>' +
         '<p class="hint">Karte einordnen, dann umdrehen. Liegt sie richtig?</p>' +
@@ -474,7 +492,7 @@
     else if (act === 'toggle') {
       if (audio.paused) { if (audio.ended) audio.currentTime = 0; audio.play().catch(function () {}); } else { audio.pause(); }
     }
-    else if (act === 'other') { playYear(stage.year, stage.song.key); }
+    else if (act === 'other') { playYear(stage.year, true); }
     else if (act === 'yes') { verdict(true); }
     else if (act === 'no') { verdict(false); }
     else if (act === 'next') { nextTurn(); }

@@ -1,0 +1,14 @@
+{
+  "name": "muziklik-tools",
+  "private": true,
+  "type": "module",
+  "description": "Werkzeuge für Müziklik: Songliste auflösen und Karten-PDFs erzeugen",
+  "scripts": {
+    "songs": "node resolve-songs.mjs",
+    "karten": "node make-cards.mjs"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4",
+    "playwright": "*"
+  }
+}

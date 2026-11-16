@@ -1,0 +1,402 @@
+# Müziklik-Songlisten. Format: Jahr | Interpret | Titel   (optional: | Suchbegriff für Deezer)
+# Nach Änderungen: node tools/resolve-songs.mjs  (sucht die Deezer-IDs und schreibt songs.js)
+
+[hits] Internationale Hits
+1960 | Elvis Presley | It's Now or Never
+1960 | Chubby Checker | The Twist
+1960 | The Drifters | Save the Last Dance for Me
+1961 | Ben E. King | Stand by Me
+1961 | The Tokens | The Lion Sleeps Tonight
+1961 | Elvis Presley | Can't Help Falling in Love
+1962 | The Beatles | Love Me Do
+1962 | Little Eva | The Loco-Motion
+1962 | Booker T. & the M.G.'s | Green Onions
+1963 | The Beatles | She Loves You
+1963 | The Ronettes | Be My Baby
+1963 | The Beach Boys | Surfin' U.S.A.
+1964 | The Animals | The House of the Rising Sun
+1964 | Roy Orbison | Oh, Pretty Woman
+1964 | The Beatles | A Hard Day's Night
+1965 | The Rolling Stones | (I Can't Get No) Satisfaction
+1965 | The Beatles | Yesterday
+1965 | Sonny & Cher | I Got You Babe
+1965 | Bob Dylan | Like a Rolling Stone
+1966 | The Beach Boys | Good Vibrations
+1966 | Frank Sinatra | Strangers in the Night
+1966 | The Monkees | I'm a Believer
+1966 | The Rolling Stones | Paint It, Black
+1967 | Aretha Franklin | Respect
+1967 | The Doors | Light My Fire
+1967 | Procol Harum | A Whiter Shade of Pale
+1968 | The Beatles | Hey Jude
+1968 | Marvin Gaye | I Heard It Through the Grapevine
+1968 | Steppenwolf | Born to Be Wild
+1969 | The Archies | Sugar, Sugar
+1969 | Elvis Presley | Suspicious Minds
+1969 | Creedence Clearwater Revival | Bad Moon Rising
+1970 | Simon & Garfunkel | Bridge over Troubled Water
+1970 | The Jackson 5 | ABC
+1970 | The Beatles | Let It Be
+1971 | John Lennon | Imagine
+1971 | Led Zeppelin | Stairway to Heaven
+1971 | Bill Withers | Ain't No Sunshine
+1972 | Stevie Wonder | Superstition
+1972 | Elton John | Rocket Man
+1972 | Deep Purple | Smoke on the Water
+1973 | Pink Floyd | Money
+1973 | Roberta Flack | Killing Me Softly with His Song
+1973 | Marvin Gaye | Let's Get It On
+1974 | ABBA | Waterloo
+1974 | Lynyrd Skynyrd | Sweet Home Alabama
+1974 | Carl Douglas | Kung Fu Fighting
+1975 | Queen | Bohemian Rhapsody
+1975 | ABBA | Mamma Mia
+1975 | Bruce Springsteen | Born to Run
+1976 | ABBA | Dancing Queen
+1976 | Boney M. | Daddy Cool
+1976 | Wild Cherry | Play That Funky Music
+1977 | Bee Gees | Stayin' Alive
+1977 | Queen | We Will Rock You
+1977 | Fleetwood Mac | Dreams
+1978 | Gloria Gaynor | I Will Survive
+1978 | Village People | Y.M.C.A.
+1978 | Boney M. | Rivers of Babylon
+1979 | Michael Jackson | Don't Stop 'Til You Get Enough
+1979 | AC/DC | Highway to Hell
+1979 | The Buggles | Video Killed the Radio Star
+1980 | Queen | Another One Bites the Dust
+1980 | AC/DC | Back in Black
+1980 | Blondie | Call Me
+1981 | Soft Cell | Tainted Love
+1981 | Journey | Don't Stop Believin'
+1981 | Kim Wilde | Kids in America
+1982 | Toto | Africa
+1982 | Culture Club | Do You Really Want to Hurt Me
+1982 | Dexys Midnight Runners | Come On Eileen
+1983 | The Police | Every Breath You Take
+1983 | Michael Jackson | Beat It
+1983 | Cyndi Lauper | Girls Just Want to Have Fun
+1983 | Nena | 99 Luftballons
+1984 | Wham! | Wake Me Up Before You Go-Go
+1984 | Prince | Purple Rain
+1984 | Alphaville | Forever Young
+1984 | Bruce Springsteen | Born in the U.S.A.
+1985 | Tears for Fears | Everybody Wants to Rule the World
+1985 | Dire Straits | Money for Nothing
+1985 | Modern Talking | Cheri Cheri Lady
+1986 | Europe | The Final Countdown
+1986 | Bon Jovi | Livin' on a Prayer
+1986 | Madonna | Papa Don't Preach
+1987 | Rick Astley | Never Gonna Give You Up
+1987 | Michael Jackson | Bad
+1987 | Whitney Houston | I Wanna Dance with Somebody (Who Loves Me)
+1988 | Bobby McFerrin | Don't Worry, Be Happy
+1988 | Tracy Chapman | Fast Car
+1988 | Yazz | The Only Way Is Up
+1989 | Madonna | Like a Prayer
+1989 | Technotronic | Pump Up the Jam
+1989 | Kaoma | Lambada
+1989 | Billy Joel | We Didn't Start the Fire
+1990 | MC Hammer | U Can't Touch This
+1990 | Sinéad O'Connor | Nothing Compares 2 U
+1990 | Vanilla Ice | Ice Ice Baby
+1990 | Madonna | Vogue
+1991 | Nirvana | Smells Like Teen Spirit
+1991 | R.E.M. | Losing My Religion
+1991 | Bryan Adams | (Everything I Do) I Do It for You
+1991 | Metallica | Enter Sandman
+1992 | Snap! | Rhythm Is a Dancer
+1992 | Dr. Alban | It's My Life
+1992 | Kris Kross | Jump
+1993 | Haddaway | What Is Love
+1993 | 4 Non Blondes | What's Up?
+1993 | Culture Beat | Mr. Vain
+1994 | Mariah Carey | All I Want for Christmas Is You
+1994 | The Cranberries | Zombie
+1994 | Rednex | Cotton Eye Joe
+1995 | Coolio | Gangsta's Paradise
+1995 | Oasis | Wonderwall
+1995 | Michael Jackson | Earth Song
+1996 | Spice Girls | Wannabe
+1996 | Fugees | Killing Me Softly
+1996 | Backstreet Boys | Quit Playing Games (With My Heart)
+1997 | Aqua | Barbie Girl
+1997 | Hanson | MMMBop
+1997 | Backstreet Boys | Everybody (Backstreet's Back)
+1997 | The Verve | Bitter Sweet Symphony
+1998 | Britney Spears | ...Baby One More Time
+1998 | Cher | Believe
+1999 | Lou Bega | Mambo No. 5 (A Little Bit of...)
+1999 | Ricky Martin | Livin' la Vida Loca
+1999 | Backstreet Boys | I Want It That Way
+1999 | Santana | Smooth
+2000 | Eminem | The Real Slim Shady
+2000 | Britney Spears | Oops!... I Did It Again
+2000 | Bon Jovi | It's My Life
+2000 | Baha Men | Who Let the Dogs Out
+2001 | Kylie Minogue | Can't Get You Out of My Head
+2001 | Shakira | Whenever, Wherever
+2001 | Destiny's Child | Survivor
+2001 | Linkin Park | In the End
+2002 | Avril Lavigne | Complicated
+2002 | Las Ketchup | The Ketchup Song (Aserejé)
+2002 | Nelly | Dilemma
+2003 | OutKast | Hey Ya!
+2003 | Beyoncé | Crazy in Love
+2003 | The White Stripes | Seven Nation Army
+2003 | 50 Cent | In da Club
+2004 | Usher | Yeah!
+2004 | Maroon 5 | This Love
+2004 | Green Day | Boulevard of Broken Dreams
+2005 | James Blunt | You're Beautiful
+2005 | Gorillaz | Feel Good Inc.
+2005 | Madonna | Hung Up
+2005 | Daniel Powter | Bad Day
+2006 | Shakira | Hips Don't Lie
+2006 | Gnarls Barkley | Crazy
+2006 | Nelly Furtado | Maneater
+2006 | Justin Timberlake | SexyBack
+2007 | Rihanna | Umbrella
+2007 | Timbaland | Apologize
+2007 | Mika | Grace Kelly
+2008 | Katy Perry | I Kissed a Girl
+2008 | Coldplay | Viva la Vida
+2008 | Lady Gaga | Poker Face
+2008 | Beyoncé | Single Ladies (Put a Ring on It)
+2009 | The Black Eyed Peas | I Gotta Feeling
+2009 | Lady Gaga | Bad Romance
+2009 | David Guetta | When Love Takes Over
+2010 | Shakira | Waka Waka (This Time for Africa)
+2010 | Eminem | Love the Way You Lie
+2010 | Katy Perry | California Gurls
+2010 | Bruno Mars | Just the Way You Are
+2011 | LMFAO | Party Rock Anthem
+2011 | Gotye | Somebody That I Used to Know
+2011 | Maroon 5 | Moves Like Jagger
+2011 | Adele | Someone Like You
+2012 | PSY | Gangnam Style
+2012 | Macklemore & Ryan Lewis | Thrift Shop
+2012 | Taylor Swift | We Are Never Ever Getting Back Together
+2012 | Rihanna | Diamonds
+2013 | Daft Punk | Get Lucky
+2013 | Avicii | Wake Me Up
+2013 | Robin Thicke | Blurred Lines
+2014 | Mark Ronson | Uptown Funk
+2014 | Taylor Swift | Shake It Off
+2014 | Ed Sheeran | Thinking Out Loud
+2014 | Sia | Chandelier
+2015 | Adele | Hello
+2015 | The Weeknd | Can't Feel My Face
+2015 | Justin Bieber | Sorry
+2015 | Major Lazer | Lean On
+2016 | Drake | One Dance
+2016 | The Chainsmokers | Closer
+2016 | Sia | Cheap Thrills
+2017 | Ed Sheeran | Shape of You
+2017 | Luis Fonsi | Despacito
+2017 | Camila Cabello | Havana
+2017 | Imagine Dragons | Believer
+2018 | Drake | God's Plan
+2018 | Ariana Grande | thank u, next
+2018 | Maroon 5 | Girls Like You
+2018 | Calvin Harris | One Kiss
+2019 | Billie Eilish | bad guy
+2019 | Lil Nas X | Old Town Road
+2019 | Tones and I | Dance Monkey
+2019 | The Weeknd | Blinding Lights
+2020 | Cardi B | WAP
+2020 | BTS | Dynamite
+2020 | 24kGoldn | Mood
+2020 | Dua Lipa | Levitating
+2021 | Olivia Rodrigo | drivers license
+2021 | The Kid LAROI | STAY
+2021 | Måneskin | ZITTI E BUONI
+2021 | Ed Sheeran | Bad Habits
+2022 | Harry Styles | As It Was
+2022 | Taylor Swift | Anti-Hero
+2022 | Rosalía | DESPECHÁ
+2022 | David Guetta | I'm Good (Blue)
+2023 | Miley Cyrus | Flowers
+2023 | Olivia Rodrigo | vampire
+2023 | Doja Cat | Paint The Town Red
+2023 | Tate McRae | greedy
+2024 | Sabrina Carpenter | Espresso
+2024 | Shaboozey | A Bar Song (Tipsy)
+2024 | Billie Eilish | BIRDS OF A FEATHER
+2024 | Benson Boone | Beautiful Things
+2024 | Lady Gaga | Die With A Smile
+2025 | Alex Warren | Ordinary
+2025 | Lady Gaga | Abracadabra
+2025 | Sabrina Carpenter | Manchild
+2025 | Doechii | Anxiety
+
+[film] Filmmusik
+1961 | Henry Mancini | Moon River
+1962 | John Barry | James Bond Theme
+1963 | Henry Mancini | The Pink Panther Theme
+1964 | Shirley Bassey | Goldfinger
+1965 | The Beatles | Help!
+1966 | Ennio Morricone | The Good, the Bad and the Ugly
+1967 | Dusty Springfield | The Look of Love
+1967 | Lulu | To Sir with Love
+1968 | Ennio Morricone | Once Upon a Time in the West
+1969 | B.J. Thomas | Raindrops Keep Fallin' on My Head
+1971 | Isaac Hayes | Theme from Shaft
+1972 | Nino Rota | Love Theme from The Godfather
+1973 | Wings | Live and Let Die
+1975 | John Williams | Main Title (Theme from Jaws) | john williams jaws main title
+1976 | Bill Conti | Gonna Fly Now
+1977 | John Williams | Star Wars (Main Title) | john williams star wars main title
+1977 | Carly Simon | Nobody Does It Better
+1978 | John Travolta & Olivia Newton-John | You're the One That I Want
+1979 | Monty Python | Always Look on the Bright Side of Life
+1980 | Irene Cara | Fame
+1980 | John Williams | The Imperial March (Darth Vader's Theme) | john williams imperial march
+1981 | Vangelis | Chariots of Fire
+1982 | Survivor | Eye of the Tiger
+1983 | Irene Cara | Flashdance... What a Feeling
+1984 | Ray Parker Jr. | Ghostbusters
+1984 | Kenny Loggins | Footloose
+1984 | Limahl | The NeverEnding Story
+1984 | Harold Faltermeyer | Axel F
+1985 | Huey Lewis & The News | The Power of Love
+1985 | Simple Minds | Don't You (Forget About Me)
+1985 | Duran Duran | A View to a Kill
+1986 | Berlin | Take My Breath Away
+1986 | Kenny Loggins | Danger Zone
+1987 | Bill Medley & Jennifer Warnes | (I've Had) The Time of My Life
+1988 | The Beach Boys | Kokomo
+1989 | Prince | Batdance
+1990 | Jon Bon Jovi | Blaze of Glory
+1991 | Guns N' Roses | You Could Be Mine
+1992 | Whitney Houston | I Will Always Love You
+1993 | John Williams | Theme from Jurassic Park | john williams theme from jurassic park
+1994 | Wet Wet Wet | Love Is All Around
+1995 | Tina Turner | GoldenEye
+1996 | Céline Dion | Because You Loved Me
+1996 | Adam Clayton | Theme from Mission: Impossible
+1997 | Céline Dion | My Heart Will Go On
+1997 | Will Smith | Men in Black
+1998 | Aerosmith | I Don't Want to Miss a Thing
+1998 | Goo Goo Dolls | Iris
+1999 | Will Smith | Wild Wild West
+1999 | Garbage | The World Is Not Enough
+2000 | Destiny's Child | Independent Women, Pt. 1
+2000 | Hans Zimmer & Lisa Gerrard | Now We Are Free
+2001 | Christina Aguilera | Lady Marmalade
+2001 | John Williams | Hedwig's Theme
+2001 | Enya | May It Be
+2002 | Eminem | Lose Yourself
+2002 | Chad Kroeger | Hero
+2003 | Klaus Badelt | He's a Pirate
+2004 | Counting Crows | Accidentally in Love
+2006 | Chris Cornell | You Know My Name
+2007 | Linkin Park | What I've Done
+2008 | A.R. Rahman | Jai Ho
+2008 | Paramore | Decode
+2009 | Linkin Park | New Divide
+2009 | Leona Lewis | I See You (Theme from Avatar)
+2010 | Hans Zimmer | Time
+2011 | Christina Perri | A Thousand Years
+2012 | Adele | Skyfall
+2013 | Pharrell Williams | Happy
+2013 | Lana Del Rey | Young and Beautiful
+2014 | Tegan and Sara | Everything Is AWESOME!!!
+2015 | Wiz Khalifa | See You Again
+2015 | Sam Smith | Writing's on the Wall
+2015 | Ellie Goulding | Love Me Like You Do
+2016 | Justin Timberlake | CAN'T STOP THE FEELING!
+2016 | Twenty One Pilots | Heathens
+2016 | Ryan Gosling & Emma Stone | City of Stars
+2017 | Keala Settle | This Is Me
+2018 | Lady Gaga & Bradley Cooper | Shallow
+2018 | Post Malone & Swae Lee | Sunflower
+2018 | Kendrick Lamar & SZA | All the Stars
+2019 | Ariana Grande, Miley Cyrus & Lana Del Rey | Don't Call Me Angel
+2020 | Billie Eilish | No Time To Die
+2021 | Ariana Grande & Kid Cudi | Just Look Up
+2022 | Lady Gaga | Hold My Hand
+2022 | Rihanna | Lift Me Up
+2023 | Billie Eilish | What Was I Made For?
+2023 | Dua Lipa | Dance the Night
+2023 | Ryan Gosling | I'm Just Ken
+2024 | Cynthia Erivo | Defying Gravity
+2024 | Ariana Grande | Popular
+2025 | HUNTR/X | Golden
+
+[disney] Disney
+1961 | Bill Lee | Cruella De Vil
+1964 | Julie Andrews & Dick Van Dyke | Supercalifragilisticexpialidocious
+1964 | Dick Van Dyke | Chim Chim Cher-ee
+1964 | Julie Andrews | A Spoonful of Sugar
+1967 | Phil Harris & Bruce Reitherman | The Bare Necessities
+1967 | Louis Prima | I Wan'na Be Like You
+1970 | Scatman Crothers & Phil Harris | Ev'rybody Wants to Be a Cat
+1973 | Roger Miller | Oo-De-Lally
+1977 | Helen Reddy | Candle on the Water
+1988 | Billy Joel | Why Should I Worry?
+1989 | Samuel E. Wright | Under the Sea
+1989 | Jodi Benson | Part of Your World
+1989 | Samuel E. Wright | Kiss the Girl
+1991 | Angela Lansbury | Beauty and the Beast
+1991 | Jerry Orbach | Be Our Guest
+1992 | Brad Kane & Lea Salonga | A Whole New World
+1992 | Robin Williams | Friend Like Me
+1994 | Carmen Twillie | Circle of Life
+1994 | Nathan Lane & Ernie Sabella | Hakuna Matata
+1994 | Elton John | Can You Feel the Love Tonight
+1994 | Jason Weaver | I Just Can't Wait to Be King
+1995 | Judy Kuhn | Colors of the Wind
+1995 | Randy Newman | You've Got a Friend in Me
+1996 | Tom Hulce | Out There
+1997 | Roger Bart | Go the Distance
+1997 | Susan Egan | I Won't Say (I'm in Love)
+1997 | Lillias White | Zero to Hero
+1998 | Lea Salonga | Reflection
+1998 | Donny Osmond | I'll Make a Man Out of You
+1999 | Phil Collins | You'll Be in My Heart
+1999 | Phil Collins | Strangers Like Me
+1999 | Sarah McLachlan | When She Loved Me
+2000 | Sting | My Funny Friend and Me
+2001 | Billy Crystal & John Goodman | If I Didn't Have You
+2002 | Mark Keali'i Ho'omalu | Hawaiian Roller Coaster Ride
+2003 | Phil Collins | On My Way
+2006 | Troy & Gabriella | Breaking Free | breaking free high school musical
+2006 | High School Musical Cast | We're All in This Together
+2006 | Rascal Flatts | Life Is a Highway
+2006 | Hannah Montana | The Best of Both Worlds
+2007 | Amy Adams | That's How You Know
+2007 | High School Musical Cast | What Time Is It
+2008 | Demi Lovato & Joe Jonas | This Is Me | this is me camp rock demi lovato
+2009 | Anika Noni Rose | Almost There
+2009 | Miley Cyrus | The Climb
+2009 | Jenifer Lewis | Dig a Little Deeper
+2010 | Mandy Moore & Zachary Levi | I See the Light
+2010 | Mandy Moore | When Will My Life Begin?
+2010 | Randy Newman | We Belong Together
+2011 | Zooey Deschanel | Winnie the Pooh
+2012 | Julie Fowlis | Touch the Sky
+2013 | Idina Menzel | Let It Go
+2013 | Kristen Bell | Do You Want to Build a Snowman?
+2013 | Kristen Bell & Idina Menzel | For the First Time in Forever
+2013 | Kristen Bell & Santino Fontana | Love Is an Open Door
+2014 | Fall Out Boy | Immortals
+2016 | Auli'i Cravalho | How Far I'll Go
+2016 | Dwayne Johnson | You're Welcome
+2016 | Shakira | Try Everything
+2017 | Anthony Gonzalez | Un Poco Loco
+2017 | Miguel | Remember Me
+2018 | Emily Blunt | The Place Where Lost Things Go
+2019 | Idina Menzel & AURORA | Into the Unknown
+2019 | Idina Menzel | Show Yourself
+2019 | Jonathan Groff | Lost in the Woods
+2019 | Naomi Scott | Speechless
+2020 | Christina Aguilera | Loyal Brave True
+2021 | Carolina Gaitán | We Don't Talk About Bruno
+2021 | Jessica Darrow | Surface Pressure
+2021 | Stephanie Beatriz | The Family Madrigal
+2022 | 4*TOWN | Nobody Like U
+2023 | Ariana DeBose | This Wish
+2024 | Auli'i Cravalho | Beyond
+2024 | Dwayne Johnson | Can I Get A Chee Hoo?
+2025 | Shakira | Zoo

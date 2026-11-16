@@ -1,0 +1,529 @@
+/* Müziklik: Styles.
+   Grundton: Stilfamilie "Night" aus Cemres Pattern-Bibliothek (dunkle Flächen, Violett-Akzent, Poppins).
+   Abschnitt 1: Tokens aus tokens.json. Abschnitt 2: Patterns unverändert aus components/bundle.css.
+   Abschnitt 3: eigene Müziklik-Styles, die nur diese Tokens benutzen. */
+
+@font-face { font-family: "Poppins"; font-weight: 400; font-display: swap; src: url("fonts/poppins-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url("fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url("fonts/poppins-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 800; font-display: swap; src: url("fonts/poppins-latin-800-normal.woff2") format("woff2"); }
+
+/* ===== 1. Tokens (Cemres Pattern-Bibliothek, Familien Night und Action) ===== */
+:root {
+  color-scheme: dark;
+  --night-bg: #111111;
+  --night-panel: #171717;
+  --night-card: #1a1a1a;
+  --night-surface: #212121;
+  --night-btn: #252525;
+  --night-btn-hover: #000000;
+  --night-field: #333333;
+  --night-ink: #f5f5f5;
+  --night-on: #ffffff;
+  --night-label: #e8e8e8;
+  --night-ink-dim: #d3d3d3;
+  --night-ink-soft: rgba(255, 255, 255, 0.7);
+  --night-ink-muted: #7c7c7c;
+  --night-accent: #956afa;
+  --night-border: #9e9e9e;
+  --night-focus: #1a73e8;
+  --night-label-focus: #2196f3;
+  --night-error: #f28b82;
+  --night-danger: #ff0000;
+  --night-radius-card: 1.25rem;
+  --night-radius-field: 1rem;
+  --night-radius-panel: 25px;
+  --night-shadow-inset: inset 2px 5px 10px rgb(5, 5, 5);
+  --act-danger: #ff4141;
+  --act-on: #ffffff;
+  --act-radius-pill: 40px;
+  --act-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  --form-on: #05c46b;
+  --font-night: "Poppins", system-ui, sans-serif;
+}
+
+/* ===== 2. Patterns aus Cemres Pattern-Bibliothek (unverändert übernommen) ===== */
+
+/* ---------------------------------------------------------------
+   ExpandIconButton
+   Quelle: Uiverse.io by vinodjangid07 (Uiverse-Inhalte stehen unter MIT-Lizenz)
+   Original: .Btn / .sign / .text -> .xbtn / .xbtn__sign / .xbtn__text
+   Farbe über --xbtn-color, aufgezogene Breite über --xbtn-open-width.
+   Öffnet bei Hover UND Tastaturfokus.
+   --------------------------------------------------------------- */
+.xbtn {
+  --xbtn-color: var(--act-danger, rgb(255, 65, 65));
+  --xbtn-open-width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: var(--act-shadow, 2px 2px 10px rgba(0, 0, 0, 0.199));
+  background-color: var(--xbtn-color);
+  color: var(--act-on, #fff);
+  font: inherit;
+}
+
+.xbtn__sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xbtn__sign svg {
+  width: 17px;
+  height: 17px;
+}
+
+.xbtn__text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--act-on, #fff);
+  font-size: 1.2em;
+  font-weight: 600;
+  white-space: nowrap;
+  transition-duration: .3s;
+}
+
+.xbtn:hover, .xbtn:focus-visible, .xbtn--open {
+  width: var(--xbtn-open-width);
+  border-radius: var(--act-radius-pill, 40px);
+}
+
+.xbtn:hover .xbtn__sign, .xbtn:focus-visible .xbtn__sign, .xbtn--open .xbtn__sign {
+  width: 48px;
+  padding-left: 6px;
+  flex: none;
+}
+
+.xbtn:hover .xbtn__text, .xbtn:focus-visible .xbtn__text, .xbtn--open .xbtn__text {
+  opacity: 1;
+  width: calc(100% - 54px);
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+
+.xbtn:focus-visible {
+  outline: 2px solid var(--xbtn-color);
+  outline-offset: 3px;
+}
+
+.xbtn:active {
+  transform: translate(2px, 2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xbtn, .xbtn__sign, .xbtn__text { transition-duration: 0s; }
+}
+
+/* ---------------------------------------------------------------
+   WordLoader
+   Quelle: Uiverse.io by kennyotsu (Uiverse-Inhalte stehen unter MIT-Lizenz)
+   .card / .loader / .words / .word -> .wld / .wld__row / .wld__words / .wld__word
+   Keyframes spin_4991 -> wld-spin; Vendor-Präfixe entfernt.
+   Schrift Poppins muss eingebunden werden (Google Fonts), sonst Systemschrift.
+   --------------------------------------------------------------- */
+.wld {
+  /* Hintergrund, mit dem oben und unten weich ausgeblendet wird */
+  --wld-bg: var(--night-bg, #111);
+  display: inline-block;
+  background-color: var(--wld-bg);
+  padding: 1rem 2rem;
+  border-radius: var(--night-radius-card, 1.25rem);
+}
+
+.wld__row {
+  color: var(--night-ink-muted, rgb(124, 124, 124));
+  font-family: var(--font-night, "Poppins", sans-serif);
+  font-weight: 500;
+  font-size: 25px;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.wld__row > p { margin: 0; }
+
+.wld__words {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.wld__words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--wld-bg) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--wld-bg) 90%
+  );
+  z-index: 20;
+}
+
+.wld__word {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 6px;
+  color: var(--night-accent, #956afa);
+  animation: wld-spin 4s infinite;
+}
+
+@keyframes wld-spin {
+  10%  { transform: translateY(-102%); }
+  25%  { transform: translateY(-100%); }
+  35%  { transform: translateY(-202%); }
+  50%  { transform: translateY(-200%); }
+  60%  { transform: translateY(-302%); }
+  75%  { transform: translateY(-300%); }
+  85%  { transform: translateY(-402%); }
+  100% { transform: translateY(-400%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wld__word { animation: none; }
+}
+
+/* ---------------------------------------------------------------
+   FloatingField
+   Quelle: Uiverse.io by alexruix (Uiverse-Inhalte stehen unter MIT-Lizenz)
+   .input-group / .input / .user-label -> .flf / .flf__input / .flf__label
+   Korrekturen: globales "input:valid" entfernt; Label schwebt bei Fokus oder Inhalt
+   (:not(:placeholder-shown), braucht placeholder=" ") statt nur bei :valid (ging nur mit required);
+   Hintergrund hinter dem Label über --flf-bg, passend zur Fläche.
+   --------------------------------------------------------------- */
+.flf {
+  --flf-bg: var(--night-surface, #212121);
+  position: relative;
+  display: inline-block;
+}
+
+.flf__input {
+  border: solid 1.5px var(--night-border, #9e9e9e);
+  border-radius: var(--night-radius-field, 1rem);
+  background: none;
+  padding: 1rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--night-ink, #f5f5f5);
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flf__label {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  color: var(--night-label, #e8e8e8);
+  pointer-events: none;
+  transform: translateY(1rem);
+  transform-origin: left center;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flf__input:focus,
+.flf__input:not(:placeholder-shown),
+.flf__input.is-focus {
+  outline: none;
+  border: 1.5px solid var(--night-focus, #1a73e8);
+}
+
+.flf__input:focus ~ .flf__label,
+.flf__input:not(:placeholder-shown) ~ .flf__label,
+.flf__input.is-focus ~ .flf__label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: var(--flf-bg);
+  padding: 0 .2em;
+  color: var(--night-label-focus, #2196f3);
+}
+
+.flf__input:user-invalid { border-color: var(--night-error, #f28b82); }
+
+@media (prefers-reduced-motion: reduce) {
+  .flf__input, .flf__label { transition: none; }
+}
+
+/* ---------------------------------------------------------------
+   InsetLoginForm
+   Quelle: Uiverse.io by Praashoo7 (Uiverse-Inhalte stehen unter MIT-Lizenz)
+   .form / #heading / .field / .input-icon / .input-field / .btn / .button1-3
+   -> .ilf / .ilf__heading / .ilf__field / .ilf__icon / .ilf__input / .ilf__actions / .ilf__btn (--wide, --danger)
+   Korrekturen: ID-Selektor #heading -> Klasse; Fokus sichtbar (Felder und Buttons hatten outline: none);
+   Zoomen beim Hover nur noch mit .ilf--lift (stört beim Tippen); Icon über currentColor; 3 Button-Klassen -> 1 + Varianten.
+   --------------------------------------------------------------- */
+.ilf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 2em 0.4em;
+  background-color: var(--night-panel, #171717);
+  border: 1px solid transparent;
+  border-radius: var(--night-radius-panel, 25px);
+  transition: .4s ease-in-out;
+}
+
+.ilf--lift:hover {
+  transform: scale(1.05);
+  border-color: #000000;
+}
+
+.ilf__heading {
+  text-align: center;
+  margin: 2em;
+  color: var(--night-on, #fff);
+  font-size: 1.2em;
+}
+
+.ilf__field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: var(--night-radius-panel, 25px);
+  padding: 0.6em 0.9em;
+  color: var(--night-on, #fff);
+  background-color: var(--night-panel, #171717);
+  box-shadow: var(--night-shadow-inset, inset 2px 5px 10px rgb(5, 5, 5));
+}
+
+.ilf__field:focus-within {
+  box-shadow: var(--night-shadow-inset, inset 2px 5px 10px rgb(5, 5, 5)), 0 0 0 1px var(--night-ink-dim, #d3d3d3);
+}
+
+.ilf__icon {
+  flex: none;
+  height: 1.3em;
+  width: 1.3em;
+  fill: none;
+  stroke: currentColor;
+}
+
+.ilf__input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font: inherit;
+  color: var(--night-ink-dim, #d3d3d3);
+}
+
+.ilf__input::placeholder { color: var(--night-ink-muted, #7c7c7c); }
+
+.ilf__actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 2.5em;
+}
+
+.ilf__btn {
+  padding: 0.5em 1.1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  background-color: var(--night-btn, #252525);
+  color: var(--night-on, #fff);
+}
+
+.ilf__btn--wide { padding-left: 2.3em; padding-right: 2.3em; }
+.ilf__btn--last { margin-bottom: 3em; }
+
+.ilf__btn:hover { background-color: var(--night-btn-hover, #000); }
+.ilf__btn--danger:hover { background-color: var(--night-danger, #ff0000); }
+
+.ilf__btn:focus-visible { outline: 2px solid var(--night-ink-dim, #d3d3d3); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ilf, .ilf__btn { transition: none; }
+  .ilf--lift:hover { transform: none; }
+}
+
+/* ===== 3. Müziklik ===== */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--night-bg);
+  color: var(--night-ink);
+  font: 400 16px/1.5 var(--font-night);
+  padding: calc(16px + env(safe-area-inset-top, 0px)) 16px calc(32px + env(safe-area-inset-bottom, 0px));
+}
+[hidden] { display: none !important; }
+h1, h2, p { margin: 0; }
+button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+.app { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+
+/* Kopfzeile */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { width: 40px; height: 40px; display: block; }
+.brand__name { font-weight: 700; font-size: 1.45rem; letter-spacing: -0.01em; }
+.brand__name b { color: var(--night-accent); font-weight: 700; }
+.xbtn { --xbtn-color: var(--night-field); flex: none; }
+.xbtn--danger { --xbtn-color: var(--act-danger); }
+
+/* Flächen */
+.card {
+  background: var(--night-panel);
+  border-radius: var(--night-radius-panel);
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.card h2 { font-size: 1.1rem; font-weight: 600; }
+.hint { color: var(--night-ink-soft); font-size: 0.9rem; }
+.label { color: var(--night-ink-soft); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Buttons im Night-Stil: .ilf__btn aus der Bibliothek, hier nur größer für den Daumen */
+.ilf__btn { min-height: 48px; border-radius: 14px; padding: 0.6em 1.1em; font-weight: 500; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row > * { flex: 1 1 0; min-width: 0; }
+.btn-main {
+  min-height: 64px; width: 100%;
+  border: none; border-radius: var(--night-radius-card);
+  background: var(--night-accent); color: var(--night-bg);
+  font-weight: 700; font-size: 1.15rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: transform .15s ease-in-out, filter .15s ease-in-out;
+}
+.btn-main:hover { filter: brightness(1.08); }
+.btn-main:active { transform: scale(0.98); }
+.btn-main:disabled { opacity: .45; cursor: not-allowed; }
+.btn-main:focus-visible, .chip:focus-visible, .step:focus-visible { outline: 2px solid var(--night-ink-dim); outline-offset: 3px; }
+.btn-main svg { width: 26px; height: 26px; }
+.btn-yes, .btn-no {
+  min-height: 64px; border: none; border-radius: var(--night-radius-card);
+  font-weight: 700; font-size: 1.05rem; cursor: pointer; color: var(--night-bg);
+}
+.btn-yes { background: var(--form-on); }
+.btn-no { background: var(--night-error); }
+.btn-yes:focus-visible, .btn-no:focus-visible { outline: 2px solid var(--night-on); outline-offset: 3px; }
+.link {
+  background: none; border: none; padding: 8px 4px; cursor: pointer;
+  color: var(--night-ink-soft); text-decoration: underline; text-underline-offset: 3px; font-size: 0.9rem;
+}
+
+/* Themen-Chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 40px; padding: 6px 14px; cursor: pointer;
+  border-radius: var(--act-radius-pill); border: 1.5px solid var(--night-field);
+  background: var(--night-btn); color: var(--night-label); font-size: 0.92rem; font-weight: 500;
+}
+.chip[aria-pressed="true"] { background: var(--night-accent); border-color: var(--night-accent); color: var(--night-bg); font-weight: 600; }
+
+/* Spieler einrichten */
+.setup-player { background: var(--night-surface); border-radius: var(--night-radius-card); padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 12px; }
+.setup-player__row { display: flex; gap: 10px; align-items: center; }
+.setup-player .flf { flex: 1; display: block; }
+.setup-player .flf__input { width: 100%; }
+.icon-btn {
+  flex: none; width: 48px; height: 48px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--night-btn); color: var(--night-ink-dim); display: grid; place-items: center;
+}
+.icon-btn:disabled { opacity: .35; cursor: not-allowed; }
+.icon-btn svg { width: 20px; height: 20px; }
+.stepper { display: flex; align-items: center; gap: 14px; }
+.step {
+  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--night-btn); color: var(--night-on); font-size: 1.4rem; font-weight: 600; line-height: 1;
+}
+.stepper output { font-weight: 700; font-size: 1.4rem; min-width: 2ch; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* Punktestand */
+.scores { display: flex; flex-direction: column; gap: 8px; }
+.score {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--night-surface); border-radius: var(--night-radius-field); padding: 8px 8px 8px 14px;
+  border: 1.5px solid transparent;
+}
+.score.is-active { border-color: var(--night-accent); }
+.score__name { flex: 1; min-width: 0; overflow-wrap: anywhere; font-weight: 600; line-height: 1.25; }
+.score__theme { display: block; font-weight: 400; font-size: 0.8rem; color: var(--night-ink-soft); }
+.score__pts { font-weight: 800; font-size: 1.5rem; min-width: 2ch; text-align: right; font-variant-numeric: tabular-nums; }
+.score__pts small { font-size: 0.8rem; font-weight: 500; color: var(--night-ink-soft); }
+.score .step { width: 40px; height: 40px; font-size: 1.2rem; }
+
+/* Bühne */
+.stage { text-align: center; align-items: stretch; min-height: 300px; justify-content: center; }
+.turn { font-size: 1.5rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.turn span { color: var(--night-accent); }
+.stage .chips { justify-content: center; }
+.notice { background: var(--night-surface); border-radius: var(--night-radius-field); padding: 10px 14px; font-size: 0.9rem; color: var(--night-label); }
+.notice--error { border: 1.5px solid var(--night-error); }
+.wld { --wld-bg: var(--night-panel); align-self: center; padding: 0; }
+
+/* Scanner */
+.scanner { position: relative; border-radius: var(--night-radius-card); overflow: hidden; background: #000000; aspect-ratio: 1 / 1; }
+.scanner video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scanner__frame {
+  position: absolute; inset: 18%; border-radius: 18px;
+  border: 3px solid var(--night-accent); box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.45);
+}
+
+/* Equalizer, solange die Hörprobe läuft */
+.eq { display: flex; align-items: flex-end; justify-content: center; gap: 7px; height: 96px; }
+.eq i { width: 12px; height: 100%; border-radius: 6px; background: var(--night-accent); transform-origin: bottom; transform: scaleY(0.18); }
+.eq.is-on i { animation: eq 1s ease-in-out infinite alternate; }
+.eq i:nth-child(1) { animation-duration: .9s; }
+.eq i:nth-child(2) { animation-duration: .6s; animation-delay: -.3s; }
+.eq i:nth-child(3) { animation-duration: 1.1s; animation-delay: -.5s; }
+.eq i:nth-child(4) { animation-duration: .7s; animation-delay: -.1s; }
+.eq i:nth-child(5) { animation-duration: 1s; animation-delay: -.7s; }
+.eq i:nth-child(6) { animation-duration: .65s; animation-delay: -.2s; }
+.eq i:nth-child(7) { animation-duration: .85s; animation-delay: -.6s; }
+@keyframes eq { from { transform: scaleY(0.15); } to { transform: scaleY(1); } }
+.bar { height: 6px; border-radius: 3px; background: var(--night-field); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--night-accent); }
+
+/* Auflösung */
+.reveal { background: var(--night-surface); border-radius: var(--night-radius-card); padding: 18px; }
+.reveal__year { font-size: 3rem; font-weight: 800; line-height: 1; color: var(--night-accent); font-variant-numeric: tabular-nums; }
+.reveal__title { font-size: 1.2rem; font-weight: 600; margin-top: 10px; overflow-wrap: anywhere; }
+.reveal__artist { color: var(--night-ink-soft); overflow-wrap: anywhere; }
+.verdict { font-weight: 700; font-size: 1.15rem; }
+.verdict--yes { color: var(--form-on); }
+.verdict--no { color: var(--night-error); }
+.winner { font-size: 1.9rem; font-weight: 800; line-height: 1.15; overflow-wrap: anywhere; }
+.winner span { color: var(--night-accent); }
+
+/* Einstellungen */
+dialog {
+  width: min(480px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow: auto;
+  border: none; border-radius: var(--night-radius-panel); padding: 20px;
+  background: var(--night-panel); color: var(--night-ink);
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+dialog form { display: flex; flex-direction: column; gap: 18px; }
+dialog section { display: flex; flex-direction: column; gap: 10px; }
+.manual { display: flex; gap: 10px; align-items: center; justify-content: center; }
+.manual .flf__input { width: 9ch; text-align: center; }
+.manual .flf { --flf-bg: var(--night-panel); }
+.setup-player .flf { --flf-bg: var(--night-surface); }
+
+@media (prefers-reduced-motion: reduce) {
+  .eq.is-on i { animation: none; transform: scaleY(0.6); }
+  .btn-main { transition: none; }
+}

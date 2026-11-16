@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Müziklik">
+  <rect width="120" height="120" rx="28" fill="#111111"/>
+  <circle cx="60" cy="60" r="44" fill="#1a1a1a" stroke="#956afa" stroke-width="3"/>
+  <circle cx="60" cy="60" r="35" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="28" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <path d="M27 44a36 36 0 0 1 17-17" fill="none" stroke="#956afa" stroke-width="3" stroke-linecap="round"/>
+  <rect x="42" y="42" width="36" height="36" rx="8" fill="#956afa"/>
+  <rect x="49" y="49" width="22" height="22" rx="4" fill="#111111"/>
+  <rect x="55" y="55" width="10" height="10" rx="2" fill="#956afa"/>
+</svg>

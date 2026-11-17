@@ -302,7 +302,8 @@
             '<button type="button" class="icon-btn" data-act="removePlayer" data-id="' + p.id + '" aria-label="Spieler ' + (i + 1) + ' entfernen"' + (state.players.length <= 1 ? ' disabled' : '') + '>' + ICON_X + '</button></div>';
         }).join('') + '</div>' +
         '<button class="ilf__btn" type="button" data-act="addPlayer"' + (state.players.length >= MAX_PLAYERS ? ' disabled' : '') + '>Spieler hinzufügen</button></section>' +
-        '<button class="btn-main" type="button" data-act="setupNext">Weiter</button>';
+        '<button class="btn-main" type="button" data-act="setupNext">Weiter</button>' +
+        '<button type="button" class="link link--back" data-act="rules">Spielregeln</button>';
     } else if (setup.step === 'mode') {
       h = '<section class="card">' + stepHead(2, 'Wie wählt ihr die Themen?') +
         '<p class="hint">Die Karte bestimmt nur das Jahr. Das Thema bestimmt, welcher Song läuft.</p>' +
@@ -408,11 +409,13 @@
         '<div class="btn-row"><button type="button" class="ilf__btn" data-act="toggle" id="toggleBtn">' + (stage.paused ? 'Abspielen' : 'Pause') + '</button>' +
         '<button type="button" class="ilf__btn" data-act="other">Anderer Song</button></div>' +
         '<p class="hint">Karte einordnen, dann umdrehen. Liegt sie richtig?</p>' +
+        '<p class="hint hint--small">Gleiches Jahr liegt schon? Direkt davor oder dahinter zählt als richtig.</p>' +
         '<div class="btn-row"><button type="button" class="btn-yes" data-act="yes">Richtig</button><button type="button" class="btn-no" data-act="no">Falsch</button></div>';
     } else if (stage.mode === 'result') {
       var next = state.players[(state.turn + 1) % state.players.length];
       h = '<p class="verdict ' + (stage.correct ? 'verdict--yes' : 'verdict--no') + '">' +
         (stage.correct ? 'Richtig! Ein Punkt für ' + esc(stage.who) + '.' : 'Falsch. Kein Punkt für ' + esc(stage.who) + '.') + '</p>' +
+        '<p class="notice">' + (stage.correct ? 'Die Karte bleibt in der Zeitleiste.' : 'Die Karte kommt aus dem Spiel: verdeckt auf den Ablagestapel.') + '</p>' +
         revealBox(stage.song) +
         '<p class="hint">Titel oder Interpret gewusst? Bonuspunkte trägst du unten mit + ein.</p>' +
         '<button type="button" class="btn-main" data-act="next">Weiter: ' + esc(playerName(next)) + '</button>';
@@ -498,6 +501,11 @@
     else if (act === 'next') { nextTurn(); }
     else if (act === 'keepPlaying') { state.wonAck = true; save(); stage = { mode: 'idle' }; renderStage(); }
     else if (act === 'newGameNow') { newGame(); }
+    else if (act === 'rules') {
+      var r = $('rules'); r.showModal();
+      // oben anfangen, nicht beim Schließen-Knopf
+      var h = $('rulesTitle'); h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); r.scrollTop = 0;
+    }
   });
 
   document.addEventListener('submit', function (e) {

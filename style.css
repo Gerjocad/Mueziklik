@@ -526,6 +526,13 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .theme-tile[aria-pressed="true"] .theme-tile__count { color: var(--night-bg); }
 .choice:focus-visible, .theme-tile:focus-visible, .link:focus-visible { outline: 2px solid var(--night-ink-dim); outline-offset: 3px; }
 
+/* Spielregeln */
+#rulesTitle:focus { outline: none; }
+.hint--small { font-size: 0.82rem; margin-top: -8px; }
+.rules p, .rules li { color: var(--night-label); font-size: 0.95rem; line-height: 1.5; }
+.rules p + p { margin-top: 6px; }
+.rules ol { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+
 /* Einstellungen */
 dialog {
   width: min(480px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow: auto;

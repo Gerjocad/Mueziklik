@@ -67,7 +67,49 @@
         </div>
       </div>
     </section>
+    <button class="ilf__btn" type="button" data-act="rules">Spielregeln</button>
     <p class="hint">Musik: 30-Sekunden-Hörproben von Deezer.</p>
+  </form>
+</dialog>
+
+<!-- ===== Spielregeln ===== -->
+<dialog id="rules" aria-labelledby="rulesTitle">
+  <form method="dialog" class="rules">
+    <h2 id="rulesTitle">Spielregeln</h2>
+    <section>
+      <span class="label">Vorbereitung</span>
+      <p>Jeder Spieler zieht eine Karte und legt sie mit dem Jahr nach oben vor sich. Das ist der Anfang seiner Zeitleiste. Die Startkarte zählt nicht als Punkt.</p>
+    </section>
+    <section>
+      <span class="label">Ein Zug</span>
+      <ol>
+        <li>Karte ziehen und mit der App scannen. Das Jahr bleibt verdeckt.</li>
+        <li>Song anhören und die Karte an die Stelle der eigenen Zeitleiste legen, an die das Jahr passt: vor die älteste Karte, zwischen zwei Karten oder hinter die neueste.</li>
+        <li>Karte umdrehen und in der App „Richtig“ oder „Falsch“ tippen.</li>
+      </ol>
+    </section>
+    <section>
+      <span class="label">Richtig</span>
+      <p>Die Karte bleibt in deiner Zeitleiste. Du bekommst einen Punkt.</p>
+    </section>
+    <section>
+      <span class="label">Falsch</span>
+      <p>Die Karte kommt aus dem Spiel und wandert verdeckt auf den Ablagestapel. Sie kommt in diesem Spiel nicht zurück. Kein Punkt.</p>
+    </section>
+    <section>
+      <span class="label">Gleiches Jahr liegt schon da</span>
+      <p>Liegt in deiner Zeitleiste schon eine Karte mit genau diesem Jahr, ist die neue Karte richtig, wenn sie direkt davor oder direkt dahinter liegt. Beide Seiten zählen.</p>
+      <p class="hint">Beispiel: Zeitleiste 1985 · 1994 · 2003, gezogen wird 1994. Richtig ist die Lücke zwischen 1985 und 1994 und die Lücke zwischen 1994 und 2003.</p>
+    </section>
+    <section>
+      <span class="label">Bonus</span>
+      <p>Wer vor dem Umdrehen Titel oder Interpret richtig nennt, bekommt einen Extrapunkt. Den trägst du im Punktestand mit + ein. Bonuspunkte zählen zum Sieg dazu.</p>
+    </section>
+    <section>
+      <span class="label">Sieg</span>
+      <p>Wer zuerst die eingestellte Punktzahl erreicht, gewinnt.</p>
+    </section>
+    <button class="ilf__btn" type="submit">Schließen</button>
   </form>
 </dialog>
 

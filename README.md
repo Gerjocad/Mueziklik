@@ -13,11 +13,20 @@ verschiedenen Themen hören bei derselben Karte also verschiedene Songs.
    - Festlegen, ob alle das gleiche Thema spielen oder jeder sein eigenes.
    - Thema wählen: einmal für alle oder nacheinander für jeden Spieler.
    Die Themen gelten für das ganze Spiel. Ändern geht nur über „Neues Spiel“.
-2. Wer dran ist, zieht eine Karte (QR-Code nach oben) und scannt sie mit der App.
-3. Die App spielt eine 30-Sekunden-Hörprobe, ohne Titel oder Jahr zu zeigen.
-4. Der Spieler legt die Karte an die Stelle seiner Zeitleiste, an die das Jahr passt, und dreht sie um.
-5. In der App „Richtig“ oder „Falsch“ tippen. Danach zeigt die App Titel und Interpret.
-6. Wer zuerst die eingestellte Zahl an Karten richtig liegen hat, gewinnt.
+2. Jeder Spieler zieht eine Startkarte und legt sie mit dem Jahr nach oben vor sich. Sie zählt nicht als Punkt.
+3. Wer dran ist, zieht eine Karte (QR-Code nach oben) und scannt sie mit der App.
+4. Die App spielt eine 30-Sekunden-Hörprobe, ohne Titel oder Jahr zu zeigen.
+5. Der Spieler legt die Karte an die Stelle seiner Zeitleiste, an die das Jahr passt, und dreht sie um.
+6. In der App „Richtig“ oder „Falsch“ tippen. Danach zeigt die App Titel und Interpret.
+   - **Richtig:** Die Karte bleibt in der Zeitleiste, ein Punkt.
+   - **Falsch:** Die Karte kommt aus dem Spiel und wandert verdeckt auf den Ablagestapel. Kein Punkt.
+7. Wer zuerst die eingestellte Punktzahl erreicht, gewinnt.
+
+**Gleiches Jahr:** Liegt schon eine Karte mit demselben Jahr in der Zeitleiste, ist die neue Karte richtig,
+wenn sie direkt davor oder direkt dahinter liegt. Beispiel: Zeitleiste 1985 · 1994 · 2003, gezogen wird 1994.
+Richtig sind beide Lücken neben der 1994.
+
+Die Regeln stehen auch in der App: auf der ersten Seite der Einrichtung und in den Einstellungen.
 
 Bonuspunkte (zum Beispiel für den richtigen Titel) lassen sich im Punktestand mit + eintragen.
 
